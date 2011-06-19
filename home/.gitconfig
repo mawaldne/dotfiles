@@ -1,0 +1,17 @@
+[user]
+	name = Mike Waldner
+	email =  <email>
+[color]
+	branch = auto
+	diff = auto
+	interactive = auto
+	status = auto
+[alias]
+	pretty = log --graph --oneline --decorate
+	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
+	stat = status -sb
+#[diff]
+#	external = /Users/mwaldner/opendiff-git.sh
+[core]
+  excludesfile = /Users/mwaldner/.gitignore
+
