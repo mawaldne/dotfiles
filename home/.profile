@@ -1,3 +1,7 @@
+
+alias l='ls -lah'
+
+
 # MacVim
 export VIM_APP_DIR=/Applications/MacVim-7_3-53
 
