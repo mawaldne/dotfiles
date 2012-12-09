@@ -1,3 +1,22 @@
+""""""""""""""""""""""""""""""""""
+" Syntax and indent
+""""""""""""""""""""""""""""""""""
+syntax on " Turn on syntax highligthing
+set showmatch  "Show matching bracets when text indicator is over them
+
+colorscheme delek
+
+" Switch on filetype detection and loads 
+" indent file (indent.vim) for specific file types
+filetype indent on
+filetype on
+set autoindent " Copy indent from the row above
+set si " Smart indent
+
+
+" I always push F1 by mistake. I dont need to see help
+nmap <F1> <nop>
+
 "Color scheme
 colorscheme koehler
 set guifont=Menlo:h12
@@ -40,9 +59,6 @@ set laststatus=2
 set backupdir=$HOME/.vim/backup
 set directory=$HOME/.vim/tmp
 
-"Display spaces as I type. use TODO color scheme to highlight
-match Todo /\s\+$/
-
 " Show invisible characters
 nmap <leader>l :set list!<CR>
 
@@ -58,3 +74,5 @@ endif
 " make python follow PEP8 ( http://www.python.org/dev/peps/pep-0008/ )
 autocmd FileType python set tabstop=4 textwidth=79
 
+" format JSON
+map <leader>j  <Esc>:%!python -m json.tool<CR>
