@@ -1,9 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =7
-let g:netrw_dirhist_1='/private/var/folders/4z/pk0wm86543zdml7frcw62crmlyt83k/T/Less-lint'
-let g:netrw_dirhist_2='/Users/mwaldner/Code/web/web-home/ui-build/langs'
-let g:netrw_dirhist_3='/Users/mwaldner/Code/web/tools/bin/ssh_tunnel'
-let g:netrw_dirhist_4='/Users/mwaldner/Code/web/tools/bin'
-let g:netrw_dirhist_5='/Users/mwaldner/Code/web/web-home/config'
-let g:netrw_dirhist_6='/Users/mwaldner/Code/web/web-ui-suggestions/build'
-let g:netrw_dirhist_7='/Users/mwaldner/Code/web/setup/rakelib'
