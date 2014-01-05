@@ -4,11 +4,16 @@
 syntax on " Turn on syntax highligthing
 set showmatch  "Show matching bracets when text indicator is over them
 
-colorscheme delek
+" Pathogen
+execute pathogen#infect()
+
+let g:solarized_termtrans = 1
+set background=dark
+colorscheme solarized
 
 " Switch on filetype detection and loads 
 " indent file (indent.vim) for specific file types
-filetype indent on
+filetype plugin indent on
 filetype on
 set autoindent " Copy indent from the row above
 set si " Smart indent
@@ -18,7 +23,6 @@ set si " Smart indent
 nmap <F1> <nop>
 
 "Color scheme
-colorscheme koehler
 set guifont=Menlo:h12
 
 "
@@ -26,8 +30,6 @@ set nocp
 
 "
 set bs=indent,eol,start
-"Ignore Case during searches
-set ignorecase
 
 "Tabspace
 set ts=2
@@ -76,3 +78,10 @@ autocmd FileType python set tabstop=4 textwidth=79
 
 " format JSON
 map <leader>j  <Esc>:%!python -m json.tool<CR>
+" format xml
+map <leader>x  <Esc>:%!xmllint --format -<CR>
+
+" quick save
+noremap <Leader>s :w<CR>
+
+
