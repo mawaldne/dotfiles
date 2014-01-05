@@ -19,9 +19,9 @@ alias projects="cd ~/projects"
 alias vim='echo "NO! Use Emacs"'
 
 # emacs
-alias emacs='open -a /Applications/Emacs.app $1'
+alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs'
+alias emacst='emacs -nw'
 alias emacsclient='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient'
-alias ec='emacsclient -c -a emacs $1 &'
 
 #git
 alias ga='git add'
