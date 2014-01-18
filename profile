@@ -9,19 +9,30 @@ alias rmlogs="find /web/ -regex '.*\.log\.[0-9]*$' -exec rm -vf {} \;"
 alias touchlogs="find /web/ -regex '.*\.log$' -exec rm -vf {} \; -exec touch {} \;"
 alias f="find . -name"
 
-alias ecs="cd /web/git/ecs"
-alias wxs="cd /web/git/wxs"
-alias infra="cd /web/git/infra"
 alias projects="cd ~/projects"
+alias rman="cd ~/Devel/git/rman"
+alias vtx="cd ~/Devel/git/vtx"
+alias vogogo="cd ~/Devel/git/vogogo"
 
 # MacVim
 #alias vim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
 alias vim='echo "NO! Use Emacs"'
 
 # emacs
-alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs'
-alias emacst='emacs -nw'
-alias emacsclient='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient'
+#alias emacs='/Applications/Emacs.app/Contents/MacOS/Emacs'
+
+#Run command in subshell to silence job control message
+emacs () {
+      (/Applications/Emacs.app/Contents/MacOS/Emacs "$@" &) 
+}
+emacst () {
+      /Applications/Emacs.app/Contents/MacOS/Emacs -nw "$@" 
+}
+alias emacsclient='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -n -q'
+ec() {
+     (emacsclient "$@" &)
+}
+
 
 #git
 alias ga='git add'
@@ -45,8 +56,8 @@ alias clear='echo "NO!"'
 ulimit -n 1024
 
 #history increase
-export HISTSIZE=10000
-export HISTFILESIZE=10000
+export HISTFILESIZE=
+export HISTSIZE=
 
 export GRADLE_OPTS="-Xmx2g -XX:MaxPermSize=756m"
 export JAVA_OPTS="-XX:MaxPermSize=256m -Xmx3g"
