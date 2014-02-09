@@ -14,6 +14,7 @@ alias rman="cd ~/Devel/git/rman"
 alias vtx="cd ~/Devel/git/vtx"
 alias vogogo="cd ~/Devel/git/vogogo"
 
+
 # MacVim
 #alias vim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
 alias vim='echo "NO! Use Emacs"'
@@ -32,6 +33,8 @@ ec() {
      (emacsclient "$@" &)
 }
 
+# Default editor
+export EDITOR="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
 
 #git
 alias ga='git add'
