@@ -19,11 +19,11 @@ alias vogogo="cd ~/Devel/git/vogogo"
 alias vim='echo "NO! Use Emacs"'
 
 # emacs
-
 #Run command in subshell to silence job control message
 e () {
       (/Applications/Emacs.app/Contents/MacOS/Emacs "$@" &) 
 }
+alias emacs=e
 et () {
       /Applications/Emacs.app/Contents/MacOS/Emacs -nw "$@" 
 }
