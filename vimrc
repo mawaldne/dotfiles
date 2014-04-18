@@ -84,4 +84,6 @@ map <leader>x  <Esc>:%!xmllint --format -<CR>
 " quick save
 noremap <Leader>s :w<CR>
 
+" Sudo save 
+cnoremap sudow w !sudo tee % >/dev/null
 

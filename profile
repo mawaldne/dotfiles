@@ -16,25 +16,7 @@ alias vogogo="cd ~/Devel/git/vogogo"
 
 
 # MacVim
-#alias vim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
-alias vim='echo "NO! Use Emacs"'
-
-# emacs
-#Run command in subshell to silence job control message
-e () {
-      (/Applications/Emacs.app/Contents/MacOS/Emacs "$@" &) 
-}
-alias emacs=e
-et () {
-      /Applications/Emacs.app/Contents/MacOS/Emacs -nw "$@" 
-}
-alias emacsclient='/Applications/Emacs.app/Contents/MacOS/bin/emacsclient -n -q'
-ec() {
-     (emacsclient "$@" &)
-}
-
-# Default editor
-export EDITOR="/Applications/Emacs.app/Contents/MacOS/Emacs -nw"
+alias vim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
 
 #git
 alias ga='git add'
@@ -63,7 +45,7 @@ export HISTSIZE=
 
 export GRADLE_OPTS="-Xmx2g -XX:MaxPermSize=756m"
 export JAVA_OPTS="-XX:MaxPermSize=256m -Xmx3g"
-
+export ANDROID_SDK_ROOT="/usr/local/Cellar/android-sdk/22.3"
 
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
