@@ -10,9 +10,12 @@ alias touchlogs="find /web/ -regex '.*\.log$' -exec rm -vf {} \; -exec touch {} 
 alias f="find . -name"
 
 alias projects="cd ~/projects"
-alias rman="cd ~/Devel/git/rman"
 alias vtx="cd ~/Devel/git/vtx"
 alias vogogo="cd ~/Devel/git/vogogo"
+alias vogogo_scripts="cd ~/Devel/git/scripts"
+alias kyc="cd ~/Devel/git/kyc"
+alias infra="cd ~/Devel/git/infrastructure"
+alias jrnldir="cd ~/Dropbox/Private/jrnl"
 
 
 # MacVim
@@ -47,6 +50,7 @@ export GRADLE_OPTS="-Xmx2g -XX:MaxPermSize=756m"
 export JAVA_OPTS="-XX:MaxPermSize=256m -Xmx3g"
 export ANDROID_SDK_ROOT="/usr/local/Cellar/android-sdk/22.3"
 
+
 if [ -f ~/.git-completion.bash ]; then
   . ~/.git-completion.bash
 fi
@@ -65,3 +69,4 @@ else
     echo "WARNING: Can't find virtualenvwrapper.sh"
 fi
 
+source /Users/mawaldne/.rvm/scripts/rvm
