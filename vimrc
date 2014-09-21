@@ -17,6 +17,7 @@ filetype plugin indent on
 filetype on
 set autoindent " Copy indent from the row above
 set si " Smart indent
+set colorcolumn=100 " Mark color column at 100 to keep lines short
 
 
 " I always push F1 by mistake. I dont need to see help
@@ -75,6 +76,9 @@ endif
 
 " make python follow PEP8 ( http://www.python.org/dev/peps/pep-0008/ )
 autocmd FileType python set tabstop=4 textwidth=79
+
+" JSON highlighting
+autocmd BufNewFile,BufRead *.json,*.template set ft=javascript
 
 " format JSON
 map <leader>j  <Esc>:%!python -m json.tool<CR>
