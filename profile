@@ -16,10 +16,11 @@ alias vogogo_scripts="cd ~/Devel/git/scripts"
 alias kyc="cd ~/Devel/git/kyc"
 alias infra="cd ~/Devel/git/infrastructure"
 alias jrnldir="cd ~/Dropbox/Private/jrnl"
+alias database="cd ~/Devel/git/database"
 
 
 # MacVim
-alias vim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
+# alias vim='/Applications/MacVim.app/Contents/MacOS/Vim -g'
 
 #git
 alias ga='git add'
