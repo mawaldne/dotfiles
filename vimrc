@@ -1,6 +1,7 @@
 " This is Mike Waldner's .vimrc file
 " Use if you dare!
 
+
 autocmd!
 
 " Pathogen
@@ -96,6 +97,15 @@ set statusline=[%02n]\ %f\ %(\[%M%R%H]%)%=\ %4l,%02c%2V\ %P%*
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MISC KEY MAPS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Move around splits with <c-hjkl>
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+
+" Insert a hash rocket with <c-l>
+imap <c-l> <space>=><space>
 
 " Show invisible characters
 nmap <leader>l :set list!<CR>
