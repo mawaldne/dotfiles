@@ -34,8 +34,6 @@ set incsearch
 set hlsearch
 " make searches case-sensitive only if they contain upper-case characters
 set ignorecase smartcase
-" highlight current line
-set cursorline
 set cmdheight=1
 set switchbuf=useopen
 set showtabline=2
@@ -106,6 +104,9 @@ nnoremap <c-l> <c-w>l
 
 " Insert a hash rocket with <c-l>
 imap <c-l> <space>=><space>
+
+" Switch to last working file quickly
+nnoremap <leader><leader> <c-^>
 
 " Show invisible characters
 nmap <leader>l :set list!<CR>
