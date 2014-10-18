@@ -1,5 +1,3 @@
-PS1="\[\033[G\]$PS1"
-
 export PATH=/opt/local/bin:/usr/local/bin:$PATH
 export PATH=$(brew --prefix ruby)/bin:$PATH
 
@@ -10,8 +8,8 @@ fi
 ulimit -n 1024
 
 #history increase
-export HISTFILESIZE=
-export HISTSIZE=
+#export HISTFILESIZE=
+#export HISTSIZE=
 
 export GRADLE_OPTS="-Xmx2g -XX:MaxPermSize=756m"
 export JAVA_OPTS="-XX:MaxPermSize=256m -Xmx3g"
