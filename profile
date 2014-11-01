@@ -29,5 +29,3 @@ if [[ -r /usr/local/bin/virtualenvwrapper.sh ]]; then
 else
     echo "WARNING: Can't find virtualenvwrapper.sh"
 fi
-
-source /Users/mawaldne/.rvm/scripts/rvm
