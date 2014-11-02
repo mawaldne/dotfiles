@@ -1,3 +1,8 @@
+" In the beginning, there was ed.
+" ed begat ex, and ex begat vi,
+" and vi begat vim.
+" - The Old Testament of Unix
+
 " This is Mike Waldner's .vimrc file
 " Use if you dare!
 
@@ -18,6 +23,7 @@ colorscheme solarized
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BASIC EDITING CONFIGURATION
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set number
 set nocompatible
 " allow unsaved background buffers and remember marks/undo for them
 set hidden
