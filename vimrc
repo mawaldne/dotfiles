@@ -119,6 +119,12 @@ imap <c-l> <space>=><space>
 " Switch to last working file quickly
 nnoremap <leader><leader> <c-^>
 
+" Navigate buffers
+" \b \f \g : go back/forward/last-used
+nnoremap <Leader>b :bp<CR>
+nnoremap <Leader>f :bn<CR>
+nnoremap <Leader>g :e#<CR>
+
 " Show invisible characters
 nmap <leader>l :set list!<CR>
 
@@ -137,6 +143,9 @@ cnoremap %% <C-R>=expand('%:h').'/'<cr>
 map <leader>e :edit %%
 map <leader>v :view %%
 
+
+" Shitty Python crap...
+
 let g:jedi#goto_assignments_command = "gd"
 let g:jedi#goto_definitions_command = "gf"
 let g:jedi#usages_command = "<leader>n"
@@ -145,6 +154,16 @@ let g:jedi#rename_command = "<leader>r"
 let g:jedi#show_call_signatures = "1"
 let g:jedi#use_tabs_not_buffers = 0
 
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-airline - show buffers on top
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Enable the list of buffers
+let g:airline#extensions#tabline#enabled = 1
+
+" Show just the filename
+let g:airline#extensions#tabline#fnamemod = ':t'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " RENAME CURRENT FILE
