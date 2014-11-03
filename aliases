@@ -31,3 +31,4 @@ alias gcl='git clone'
 #USE CONTROL L
 alias clear='echo "NO!"'
 
+alias git=hub
