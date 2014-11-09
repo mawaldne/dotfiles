@@ -3,7 +3,8 @@ export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="robbyrussell"
 
-plugins=(git)
+# Note - hub is currently a hack...See: https://github.com/github/hub/issues/231
+plugins=(git hub)
 
 source $ZSH/oh-my-zsh.sh
 source $HOME/.profile

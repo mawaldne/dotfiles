@@ -113,17 +113,15 @@ nnoremap <silent> ]b :bnext<CR>
 nnoremap <silent> [B :bfirst<CR>
 nnoremap <silent> ]B :blast<CR>
 
+" Navigate buffers with tab and shift tab
+nnoremap <Tab> :bn<CR>
+nnoremap <S-Tab> :bp<CR>
+
 " Insert a hash rocket with <c-l>
 imap <c-l> <space>=><space>
 
 " Switch to last working file quickly
 nnoremap <leader><leader> <c-^>
-
-" Navigate buffers
-" \b \f \g : go back/forward/last-used
-nnoremap <Leader>b :bp<CR>
-nnoremap <Leader>f :bn<CR>
-nnoremap <Leader>g :e#<CR>
 
 " Show invisible characters
 nmap <leader>l :set list!<CR>
