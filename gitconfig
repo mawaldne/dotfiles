@@ -1,17 +1,28 @@
 [user]
 	name = Mike Waldner
-	email =  <email>
+	email = mike.waldner@redfall.com
 [color]
 	branch = auto
 	diff = auto
 	interactive = auto
 	status = auto
 [alias]
-	pretty = log --graph --oneline --decorate
-	lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr)%Creset' --abbrev-commit --date=relative
 	stat = status -sb
-#[diff]
-#	external = /Users/mwaldner/opendiff-git.sh
+    aa = add --all
+    di = diff
+    dc = diff --cached
+    amend = commit --amend
+	stat = status -sb
+    pretty = "!. ~/.githelpers && pretty_git_log"
 [core]
-  excludesfile = /Users/mwaldner/.gitignore
+    excludesfile = /Users/mawaldne/.gitignore
+[branch]
+	autosetuprebase = always
+[credential]
+	helper = osxkeychain
+[push]
+	default = simple
+[filter "media"]
+	clean = git-media-clean %f
+	smudge = git-media-smudge %f
 
