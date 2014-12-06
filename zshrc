@@ -20,3 +20,7 @@ man() {
     man "$@"
 }
 
+# How to keep git log and less output on the screen
+# http://sebgoo.blogspot.ca/2014/02/how-to-keep-git-log-and-less-output-on.html
+export LESS=-iXFR
+
