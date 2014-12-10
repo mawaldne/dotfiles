@@ -107,12 +107,6 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
-" Move around buffers more efficiently
-nnoremap <silent> [b :bprevious<CR>
-nnoremap <silent> ]b :bnext<CR>
-nnoremap <silent> [B :bfirst<CR>
-nnoremap <silent> ]B :blast<CR>
-
 " Navigate buffers with tab and shift tab
 nnoremap <Tab> :bn<CR>
 nnoremap <S-Tab> :bp<CR>
