@@ -46,3 +46,10 @@ pretty_git_log() {
         fi
 }
 
+delete_merged_branches() {
+    git branch --merged master |
+    grep -v "\* master" |
+    xargs -r -n 1 git branch -d
+}
+
+

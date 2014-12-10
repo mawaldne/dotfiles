@@ -14,6 +14,7 @@
     amend = commit --amend
 	stat = status -sb
     pretty = "!. ~/.githelpers && pretty_git_log"
+    delete-merged = "!. ~/.githelpers && delete_merged_branches"
 [core]
     excludesfile = /Users/mawaldne/.gitignore
 [branch]
