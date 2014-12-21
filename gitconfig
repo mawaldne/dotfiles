@@ -17,6 +17,7 @@
     delete-merged = "!. ~/.githelpers && delete_merged_branches"
 [core]
     excludesfile = /Users/mawaldne/.gitignore
+    autocrlf = input
 [branch]
 	autosetuprebase = always
 [credential]
