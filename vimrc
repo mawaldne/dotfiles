@@ -128,24 +128,26 @@ if &encoding == 'utf-8'
     set listchars=tab:▸\ ,eol:¬,trail:·
 endif
 
+" vim-ruby-xmpfilter - m=mark, r=run, c=clean
+let g:xmpfilter_cmd = "seeing_is_believing"
+autocmd FileType ruby nmap <buffer> <leader>m <Plug>(seeing_is_believing-mark)
+autocmd FileType ruby xmap <buffer> <leader>m <Plug>(seeing_is_believing-mark)
+autocmd FileType ruby imap <buffer> <leader>m <Plug>(seeing_is_believing-mark)
+
+autocmd FileType ruby nmap <buffer> <leader>r <Plug>(seeing_is_believing-run_-x)
+autocmd FileType ruby xmap <buffer> <leader>r <Plug>(seeing_is_believing-run_-x)
+autocmd FileType ruby imap <buffer> <leader>r <Plug>(seeing_is_believing-run_-x)
+
+autocmd FileType ruby nmap <buffer> <leader>c <Plug>(seeing_is_believing-clean)
+autocmd FileType ruby xmap <buffer> <leader>c <Plug>(seeing_is_believing-clean)
+autocmd FileType ruby imap <buffer> <leader>c <Plug>(seeing_is_believing-clean)
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " OPEN FILES IN DIRECTORY OF CURRENT FILE
 " """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 map <leader>e :edit %%
 map <leader>v :view %%
-
-
-" Shitty Python crap...
-
-let g:jedi#goto_assignments_command = "gd"
-let g:jedi#goto_definitions_command = "gf"
-let g:jedi#usages_command = "<leader>n"
-let g:jedi#completions_command = "<C-Space>"
-let g:jedi#rename_command = "<leader>r"
-let g:jedi#show_call_signatures = "1"
-let g:jedi#use_tabs_not_buffers = 0
-
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-airline - show buffers on top
@@ -182,3 +184,4 @@ autocmd FileType python set sw=4 sts=4 et
 
 " JSON highlighting
 autocmd BufNewFile,BufRead *.json,*.template set ft=javascript
+
