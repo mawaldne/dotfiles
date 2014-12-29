@@ -1,6 +1,7 @@
 alias l='ls'
 alias ll='ls -lah'
 alias f="find . -name"
+alias rmorig="find . -regex '.*\.orig$' -exec rm -vf {} \;"
 
 alias projects="cd ~/projects"
 alias vtx="cd ~/Devel/git/vtx"
