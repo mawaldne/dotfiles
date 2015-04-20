@@ -4,15 +4,13 @@ alias f="find . -name"
 alias rmorig="find . -regex '.*\.orig$' -exec rm -vf {} \;"
 
 alias projects="cd ~/projects"
-alias vtx="cd ~/Devel/git/vtx"
-alias vogogo="cd ~/Devel/git/vogogo"
-alias vogogo_scripts="cd ~/Devel/git/scripts"
-alias kyc="cd ~/Devel/git/kyc"
-alias kyc-admin="cd ~/Devel/git/kyc-admin"
-alias chef="cd ~/Devel/git/chef"
-alias infra="cd ~/Devel/git/infrastructure"
-alias jrnldir="cd ~/Dropbox/Private/jrnl"
-alias database="cd ~/Devel/git/database"
+alias vtx="cd ~/projects/vtx"
+alias vogogo="cd ~/projects/vogogo"
+alias vogogo_scripts="cd ~/projects/scripts"
+alias kyc="cd ~/projects/kyc"
+alias kyc-admin="cd ~/projects/kyc-admin"
+alias chef="cd ~/projects/chef"
+alias infra="cd ~/projects/infrastructure"
 
 alias ga='git add'
 alias gpush='git push'
