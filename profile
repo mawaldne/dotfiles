@@ -29,3 +29,7 @@ if [[ -r /usr/local/bin/virtualenvwrapper.sh ]]; then
 else
     echo "WARNING: Can't find virtualenvwrapper.sh"
 fi
+
+# GO
+export GOPATH=$HOME/go
+export PATH=$PATH:/usr/local/opt/go/libexec/bin:$GOPATH/bin
