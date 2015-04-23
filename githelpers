@@ -53,4 +53,8 @@ delete_merged_branches() {
     xargs -r -n 1 git branch -d
 }
 
+rebase_branch() {
+    delete_merged_branches
+    git checkout $1 | git rebase origin/master
+}
 
