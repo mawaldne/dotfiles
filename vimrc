@@ -100,6 +100,18 @@ noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Ctrl P
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Ctags list in Ctrl P
+nnoremap <leader>. :CtrlPTag<cr>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" NerdTree
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Navigate to file in nerdtree
+map <leader>r :NERDTreeFind<cr>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " STATUS LINE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
@@ -115,18 +127,12 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
-" Navigate buffers with tab and shift tab
-nnoremap <Tab> :bn<CR>
-nnoremap <S-Tab> :bp<CR>
-
-" Insert a hash rocket with <c-l>
-imap <c-l> <space>=><space>
-
-" Switch to last working file quickly
-nnoremap <leader><leader> <c-^>
-
 " Show invisible characters
 nmap <leader>l :set list!<CR>
+
+" Repeat last ex command using F2
+map <F2> @:
+
 
 " Clears trailing whitespace
 map <Leader><Space> :%s/\s\+$//<CR>:let @/=''<CR>
@@ -135,20 +141,6 @@ map <Leader><Space> :%s/\s\+$//<CR>:let @/=''<CR>
 if &encoding == 'utf-8'
     set listchars=tab:▸\ ,eol:¬,trail:·
 endif
-
-" vim-ruby-xmpfilter - m=mark, r=run, c=clean
-let g:xmpfilter_cmd = "seeing_is_believing"
-autocmd FileType ruby nmap <buffer> <leader>m <Plug>(seeing_is_believing-mark)
-autocmd FileType ruby xmap <buffer> <leader>m <Plug>(seeing_is_believing-mark)
-autocmd FileType ruby imap <buffer> <leader>m <Plug>(seeing_is_believing-mark)
-
-autocmd FileType ruby nmap <buffer> <leader>r <Plug>(seeing_is_believing-run_-x)
-autocmd FileType ruby xmap <buffer> <leader>r <Plug>(seeing_is_believing-run_-x)
-autocmd FileType ruby imap <buffer> <leader>r <Plug>(seeing_is_believing-run_-x)
-
-autocmd FileType ruby nmap <buffer> <leader>c <Plug>(seeing_is_believing-clean)
-autocmd FileType ruby xmap <buffer> <leader>c <Plug>(seeing_is_believing-clean)
-autocmd FileType ruby imap <buffer> <leader>c <Plug>(seeing_is_believing-clean)
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " OPEN FILES IN DIRECTORY OF CURRENT FILE
@@ -160,6 +152,9 @@ map <leader>v :view %%
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-airline - show buffers on top
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Go to previous buffer and delete last one
+nmap <leader>bq :bp <BAR> bd #<CR>
 
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1

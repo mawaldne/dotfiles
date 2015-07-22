@@ -50,7 +50,7 @@ delete_merged_branches() {
     git checkout master && git pull && git fetch -p
     git branch --merged master |
     grep -v "\* master" |
-    xargs -r -n 1 git branch -d
+    gxargs -r -n 1 git branch -d
 }
 
 rebase_branch() {
