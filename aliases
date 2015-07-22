@@ -3,6 +3,8 @@ alias ll='ls -lah'
 alias f="find . -name"
 alias rmorig="find . -regex '.*\.orig$' -exec rm -vf {} \;"
 
+alias ctags="`brew --prefix`/bin/ctags"
+
 alias projects="cd ~/projects"
 alias vtx="cd ~/projects/vtx"
 alias vogogo="cd ~/projects/vogogo"
