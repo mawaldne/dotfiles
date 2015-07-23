@@ -9,10 +9,6 @@ fi
 
 ulimit -n 1024
 
-#history increase
-#export HISTFILESIZE=
-#export HISTSIZE=
-
 export GRADLE_OPTS="-Xmx2g -XX:MaxPermSize=756m"
 export JAVA_OPTS="-XX:MaxPermSize=256m -Xmx3g"
 

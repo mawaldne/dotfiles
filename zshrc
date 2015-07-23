@@ -9,6 +9,13 @@ plugins=(git hub)
 source $ZSH/oh-my-zsh.sh
 source $HOME/.profile
 
+# Make history files large and shared over multiple sessions
+export HISTFILE=~/.zsh_history
+export HISTCONTROL=ignoredups:erasedups  # no duplicate entries
+export HISTSIZE=100000                   # big big history
+export HISTFILESIZE=100000               # big big history
+setopt HISTAPPEND HIST_IGNORE_SPACE HIST_REDUCE_BLANKS HIST_VERIFY HIST_IGNORE_ALL_DUPS HIST_IGNORE_DUPS SHARE_HISTORY INC_APPEND_HISTORY EXTENDED_HISTORY
+
 # Add coloring to man pages
 # Source: https://wiki.archlinux.org/index.php/man_page#Colored_man_pages
 man() {
