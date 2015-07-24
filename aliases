@@ -6,12 +6,13 @@ alias rmorig="find . -regex '.*\.orig$' -exec rm -vf {} \;"
 alias ctags="`brew --prefix`/bin/ctags"
 
 alias projects="cd ~/projects"
+alias dotfiles="cd ~/dotfiles"
+
 alias vtx="cd ~/projects/vtx"
 alias vogogo="cd ~/projects/vogogo"
 alias vogogo_scripts="cd ~/projects/scripts"
 alias kyc="cd ~/projects/kyc"
 alias kyc-admin="cd ~/projects/kyc-admin"
-alias chef="cd ~/projects/chef"
 alias infra="cd ~/projects/infrastructure"
 
 alias ga='git add'

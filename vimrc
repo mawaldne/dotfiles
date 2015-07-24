@@ -90,7 +90,6 @@ set autoread
 set backupdir=$HOME/.vim/backup
 set directory=$HOME/.vim/tmp
 
-
 " Yank text to the OS X clipboard
 noremap <leader>y "*y
 noremap <leader>yy "*Y
@@ -98,6 +97,7 @@ noremap <leader>yy "*Y
 " " Preserve indentation while pasting text from the OS X clipboard
 noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
 
+noremap <leader>s :w<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Ctrl P
@@ -108,8 +108,12 @@ nnoremap <leader>. :CtrlPTag<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NerdTree
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:NERDTreeWinPos = "right"
+let g:NERDTreeWinSize = 40 
+
 " Navigate to file in nerdtree
 map <leader>r :NERDTreeFind<cr>
+nmap <leader>ne :NERDTreeToggle<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " STATUS LINE
@@ -121,6 +125,10 @@ set statusline=[%02n]\ %f\ %(\[%M%R%H]%)%=\ %4l,%02c%2V\ %P%*
 " MISC KEY MAPS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+" Show invisible characters
+" todo - save current line and go to that line....
+nmap <leader>f gg=G
+
 " Move around splits with <c-hjkl>
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
@@ -128,11 +136,10 @@ nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
 " Show invisible characters
-nmap <leader>l :set list!<CR>
+nmap <leader>i :set list!<CR>
 
 " Repeat last ex command using F2
 map <F2> @:
-
 
 " Clears trailing whitespace
 map <Leader><Space> :%s/\s\+$//<CR>:let @/=''<CR>
@@ -153,8 +160,26 @@ map <leader>v :view %%
 " vim-airline - show buffers on top
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
-" Go to previous buffer and delete last one
+" This allows buffers to be hidden if you've modified a buffer.
+" This is almost a must if you wish to use buffers in this way.
+set hidden
+
+" To open a new empty buffer
+" This replaces :tabnew which I used to bind to this mapping
+nmap <leader>T :enew<cr>
+
+" Move to the next buffer
+nmap <leader>l :bnext<CR>
+
+" Move to the previous buffer
+nmap <leader>h :bprevious<CR>
+
+" Close the current buffer and move to the previous one
+" This replicates the idea of closing a tab
 nmap <leader>bq :bp <BAR> bd #<CR>
+
+" Show all open buffers and their status
+nmap <leader>bl :ls<CR>
 
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1
@@ -187,4 +212,3 @@ autocmd FileType python set sw=4 sts=4 et
 
 " JSON highlighting
 autocmd BufNewFile,BufRead *.json,*.template set ft=javascript
-
