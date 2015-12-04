@@ -6,27 +6,29 @@
 " This is Mike Waldner's .vimrc file
 " Use if you dare!
 
-
 autocmd!
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Pathogen
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Color
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-let g:solarized_termtrans = 1
-set background=dark
-colorscheme solarized
+let g:molokai_original = 1
+colorscheme molokai
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BASIC EDITING CONFIGURATION
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set number
 set nocompatible
+
 " allow unsaved background buffers and remember marks/undo for them
 set hidden
+
 " remember more commands and search history
 set history=10000
 set expandtab
@@ -38,52 +40,69 @@ set laststatus=2
 set showmatch
 set incsearch
 set hlsearch
+
 " make searches case-sensitive only if they contain upper-case characters
 set ignorecase smartcase
+
 set cmdheight=1
 set switchbuf=useopen
 set showtabline=2
 set winwidth=79
+
 " This makes RVM work inside Vim. I have no idea why.
 set shell=bash
+
 " Prevent Vim from clobbering the scrollback buffer. See
 " http://www.shallowsky.com/linux/noaltscreen.html
 set t_ti= t_te=
+
 " keep more context when scrolling off the end of a buffer
 set scrolloff=3
+
 " Don't make backups at all
 set nobackup
 set nowritebackup
 
 set backspace=indent,eol,start
+
 " display incomplete commands
 set showcmd
+
 " Enable highlighting for syntax
 syntax on
+
 " Enable file type detection.
 " Use the default filetype settings, so that mail gets 'tw' set to 72,
 " 'cindent' is on in C files, etc.
 " Also load indent files, to automatically do language-dependent indenting.
 filetype plugin indent on
+
 " use emacs-style tab completion when selecting files, etc
 set wildmode=longest,list
+
 " make tab completion for files/buffers act like bash
 set wildmenu
+
 " Fix slow O inserts
 :set timeout timeoutlen=1000 ttimeoutlen=100
+
 " Normally, Vim messes with iskeyword when you open a shell file. This can
 " leak out, polluting other file types even after a 'set ft=' change. This
 " variable prevents the iskeyword change so it can't hurt anyone.
 let g:sh_noisk=1
+
 " Modelines (comments that set vim options on a per-file basis)
 set modeline
 set modelines=3
+
 " Turn folding off for real, hopefully
 set foldmethod=manual
 set nofoldenable
+
 " Insert only one space when joining lines that contain sentence-terminating
 " punctuation like `.`.
 set nojoinspaces
+
 " If a file is changed outside of vim, automatically reload it without asking
 set autoread
 
@@ -97,7 +116,11 @@ noremap <leader>yy "*Y
 " " Preserve indentation while pasting text from the OS X clipboard
 noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
 
-noremap <leader>s :w<cr>
+" Space works better on my kenesis keyboard. Kenesis for life!
+let mapleader = "\<Space>"
+
+" Committing the ultimate sin because I like to use the scroll wheel to scroll
+set mouse=a
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Ctrl P
@@ -105,11 +128,23 @@ noremap <leader>s :w<cr>
 " Ctags list in Ctrl P
 nnoremap <leader>. :CtrlPTag<cr>
 
+" The Silver Searcher
+if executable('ag')
+" Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NerdTree
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:NERDTreeWinPos = "right"
-let g:NERDTreeWinSize = 40 
+let g:NERDTreeWinPos = "left"
+let g:NERDTreeWinSize = 40
 
 " Navigate to file in nerdtree
 map <leader>r :NERDTreeFind<cr>
@@ -118,17 +153,11 @@ nmap <leader>ne :NERDTreeToggle<cr>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " STATUS LINE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 set statusline=[%02n]\ %f\ %(\[%M%R%H]%)%=\ %4l,%02c%2V\ %P%*
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MISC KEY MAPS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-" Show invisible characters
-" todo - save current line and go to that line....
-nmap <leader>f gg=G
-
 " Move around splits with <c-hjkl>
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
@@ -151,7 +180,7 @@ endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " OPEN FILES IN DIRECTORY OF CURRENT FILE
-" """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 cnoremap %% <C-R>=expand('%:h').'/'<cr>
 map <leader>e :edit %%
 map <leader>v :view %%
@@ -159,7 +188,6 @@ map <leader>v :view %%
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-airline - show buffers on top
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 " This allows buffers to be hidden if you've modified a buffer.
 " This is almost a must if you wish to use buffers in this way.
 set hidden
@@ -168,24 +196,23 @@ set hidden
 " This replaces :tabnew which I used to bind to this mapping
 nmap <leader>T :enew<cr>
 
-" Move to the next buffer
-nmap <leader>l :bnext<CR>
-
-" Move to the previous buffer
-nmap <leader>h :bprevious<CR>
-
 " Close the current buffer and move to the previous one
 " This replicates the idea of closing a tab
-nmap <leader>bq :bp <BAR> bd #<CR>
-
-" Show all open buffers and their status
-nmap <leader>bl :ls<CR>
+nmap <leader>w :bp <BAR> bd #<CR>
 
 " Enable the list of buffers
 let g:airline#extensions#tabline#enabled = 1
 
 " Show just the filename
 let g:airline#extensions#tabline#fnamemod = ':t'
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" RSpec.vim mappings
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>a :call RunAllSpecs()<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " RENAME CURRENT FILE
