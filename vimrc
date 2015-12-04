@@ -109,15 +109,15 @@ set autoread
 set backupdir=$HOME/.vim/backup
 set directory=$HOME/.vim/tmp
 
+" Space works better on my kenesis keyboard. Kenesis for life!
+let mapleader = "\<Space>"
+
 " Yank text to the OS X clipboard
 noremap <leader>y "*y
 noremap <leader>yy "*Y
 
 " " Preserve indentation while pasting text from the OS X clipboard
 noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
-
-" Space works better on my kenesis keyboard. Kenesis for life!
-let mapleader = "\<Space>"
 
 " Committing the ultimate sin because I like to use the scroll wheel to scroll
 set mouse=a
