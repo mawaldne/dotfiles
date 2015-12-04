@@ -46,7 +46,7 @@ set ignorecase smartcase
 
 set cmdheight=1
 set switchbuf=useopen
-set showtabline=2
+set showtabline=1
 set winwidth=79
 
 " This makes RVM work inside Vim. I have no idea why.
@@ -113,8 +113,7 @@ set directory=$HOME/.vim/tmp
 let mapleader = "\<Space>"
 
 " Yank text to the OS X clipboard
-noremap <leader>y "*y
-noremap <leader>yy "*Y
+map <leader>y "*y
 
 " " Preserve indentation while pasting text from the OS X clipboard
 noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
@@ -125,9 +124,6 @@ set mouse=a
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Ctrl P
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Ctags list in Ctrl P
-nnoremap <leader>. :CtrlPTag<cr>
-
 " The Silver Searcher
 if executable('ag')
 " Use ag over grep
@@ -139,6 +135,23 @@ if executable('ag')
   " ag is fast enough that CtrlP doesn't need to cache
   let g:ctrlp_use_caching = 0
 endif
+
+" bind \ (backward slash) to grep shortcut
+command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+
+nnoremap <c-b> :CtrlPBuffer<cr>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Syntastic
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NerdTree
@@ -186,7 +199,7 @@ map <leader>e :edit %%
 map <leader>v :view %%
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" vim-airline - show buffers on top
+" Buffers
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " This allows buffers to be hidden if you've modified a buffer.
 " This is almost a must if you wish to use buffers in this way.
@@ -199,12 +212,6 @@ nmap <leader>T :enew<cr>
 " Close the current buffer and move to the previous one
 " This replicates the idea of closing a tab
 nmap <leader>w :bp <BAR> bd #<CR>
-
-" Enable the list of buffers
-let g:airline#extensions#tabline#enabled = 1
-
-" Show just the filename
-let g:airline#extensions#tabline#fnamemod = ':t'
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " RSpec.vim mappings
