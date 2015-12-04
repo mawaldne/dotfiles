@@ -31,5 +31,7 @@ man() {
 # http://sebgoo.blogspot.ca/2014/02/how-to-keep-git-log-and-less-output-on.html
 export LESS=-iXFR
 
+bindkey '^R' history-incremental-search-backward
+
 
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

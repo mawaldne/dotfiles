@@ -55,6 +55,6 @@ delete_merged_branches() {
 
 rebase_branch() {
     delete_merged_branches
-    git checkout $1 | git rebase origin/master
+    git checkout $1 && git rebase origin/master
 }
 
