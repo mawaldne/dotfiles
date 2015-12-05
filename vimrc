@@ -112,10 +112,14 @@ set directory=$HOME/.vim/tmp
 " Space works better on my kenesis keyboard. Kenesis for life!
 let mapleader = "\<Space>"
 
-" Yank text to the OS X clipboard
-map <leader>y "*y
+" Auto Yank text to the OS X clipboard
+function! CopySystemRegister()
+  let @*=@"
+endfunction
+command! -range -bar SystemRegisterYank <line1>,<line2>yank|call CopySystemRegister()
+vnoremap y :SystemRegisterYank<cr>
 
-" " Preserve indentation while pasting text from the OS X clipboard
+" Preserve indentation while pasting text from the OS X clipboard
 noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -136,7 +140,8 @@ endif
 " bind \ (backward slash) to grep shortcut
 command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 
-nnoremap <c-b> :CtrlPBuffer<cr>
+" Search open buffers for file
+nnoremap <c-u> :CtrlPBuffer<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Syntastic
