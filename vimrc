@@ -84,7 +84,7 @@ set wildmode=longest,list
 set wildmenu
 
 " Fix slow O inserts
-:set timeout timeoutlen=1000 ttimeoutlen=100
+set timeout timeoutlen=1000 ttimeoutlen=100
 
 " Normally, Vim messes with iskeyword when you open a shell file. This can
 " leak out, polluting other file types even after a 'set ft=' change. This
@@ -113,7 +113,7 @@ set directory=$HOME/.vim/tmp
 let mapleader = "\<Space>"
 
 " Copy everything to the system clipboard
-set clipboard=unnamed
+set clipboard+=unnamed
 
 " Preserve indentation while pasting text from the OS X clipboard
 noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
@@ -138,6 +138,9 @@ command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
 
 " Search open buffers for file
 nnoremap <c-u> :CtrlPBuffer<cr>
+
+" Open YankRing
+nnoremap <c-y> :YRShow<cr>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Syntastic
