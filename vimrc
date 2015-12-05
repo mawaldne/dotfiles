@@ -118,9 +118,6 @@ map <leader>y "*y
 " " Preserve indentation while pasting text from the OS X clipboard
 noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
 
-" Committing the ultimate sin because I like to use the scroll wheel to scroll
-set mouse=a
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Ctrl P
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
