@@ -1,0 +1,1 @@
+../bundle/YankRing.vim/plugin/yankring.vim
