@@ -112,12 +112,8 @@ set directory=$HOME/.vim/tmp
 " Space works better on my kenesis keyboard. Kenesis for life!
 let mapleader = "\<Space>"
 
-" Automatically copy yanked text to the OS X clipboard
-function! CopyToSystemRegister()
-  let @*=@"
-endfunction
-command! -range -bar YankToSystemRegister <line1>,<line2>yank|call CopyToSystemRegister()
-vnoremap y :YankToSystemRegister<cr>
+" Copy everything to the system clipboard
+set clipboard=unnamed
 
 " Preserve indentation while pasting text from the OS X clipboard
 noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
