@@ -12,6 +12,8 @@ ulimit -n 1024
 export GRADLE_OPTS="-Xmx2g -XX:MaxPermSize=756m"
 export JAVA_OPTS="-XX:MaxPermSize=256m -Xmx3g"
 
+export EDITOR=vim
+
 #Python
 export PATH=$PATH:/usr/local/share/python
 export WORKON_HOME=$HOME/.virtualenvs
