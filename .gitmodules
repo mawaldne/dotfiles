@@ -34,3 +34,6 @@
 [submodule ".vim/bundle/vim-bundler"]
 	path = .vim/bundle/vim-bundler
 	url = https://github.com/tpope/vim-bundler
+[submodule ".vim/bundle/paredit.vim"]
+	path = .vim/bundle/paredit.vim
+	url = https://github.com/vim-scripts/paredit.vim
