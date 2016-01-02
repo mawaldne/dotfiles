@@ -1,6 +1,6 @@
 (require 'package):
 (dolist (source '(("melpa" . "http://melpa.org/packages/")
-		  ("marmalade" . "https://marmalade-repo.org/packages/")))
+          ("marmalade" . "https://marmalade-repo.org/packages/")))
   (add-to-list 'package-archives source t))
 (package-initialize)
 
@@ -8,29 +8,30 @@
   (package-refresh-contents))
 
 (dolist (pkg '(ace-window
-	       ag
-	       anzu
-	       better-defaults
-	       cider
-	       clojure-mode
-	       company
-	       evil
-	       exec-path-from-shell
-	       flx-ido
-	       flycheck
-	       gist
-	       ido-ubiquitous
-	       ido-vertical-mode
-	       inf-ruby
-	       magit
-	       markdown-mode
+           ag
+           anzu
+           better-defaults
+           cider
+           clojure-mode
+           company
+           evil
+           evil-leader
+           exec-path-from-shell
+           flx-ido
+           flycheck
+           gist
+           ido-ubiquitous
+           ido-vertical-mode
+           inf-ruby
+           magit
+           markdown-mode
            molokai-theme
-	       paredit
-	       projectile
-	       racket-mode
-	       smex
-               web-mode
-	       yari))
+           paredit
+           projectile
+           racket-mode
+           smex
+           web-mode
+           yari))
   (unless (package-installed-p pkg)
     (package-install pkg)))
 
@@ -90,6 +91,10 @@
 ;; Linenum mode on
 (global-linum-mode t)                                                   
 (setq linum-format "%4d ")
+
+;; evil
+(global-evil-leader-mode)
+(evil-leader/set-leader "<SPC>")
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
