@@ -1,2 +1,7 @@
 .vim/tmp/*.swp
 .vim/tmp/*.swo
+
+.emacs.d/backup/
+.emacs.d/backups/
+.emacs.d/elpa/
+.emacs.d/places
