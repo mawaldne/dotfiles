@@ -89,6 +89,7 @@
 (scroll-bar-mode -1)
 (setq auto-save-default nil)
 
+
 ;; Linenum mode on
 (global-linum-mode t)                                                   
 (setq linum-format "%4d ")
@@ -107,6 +108,24 @@
 (evil-leader/set-leader "<SPC>")
 
 (global-evil-matchit-mode 1)
+
+;; Copy to clipboard
+(when (and (not (display-graphic-p)) (eq system-type 'darwin))
+  (defun mw/copy-from-osx ()
+    "Copies the current clipboard content using the `pbcopy` command"
+    (shell-command-to-string "pbpaste"))
+
+  (defun mw/paste-to-osx (text &optional push)
+    "Copies the top of the kill ring stack to the OSX clipboard"
+    (let ((process-connection-type nil))
+      (let ((proc (start-process "pbcopy" "*Messages*" "pbcopy")))
+        (process-send-string proc text)
+        (process-send-eof proc))))
+
+  (setq interprogram-cut-function 'mw/paste-to-osx)
+  (setq interprogram-paste-function 'mw/copy-from-osx))
+
+(global-set-key (kbd "C-z") 'evil-mode)
 
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
