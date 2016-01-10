@@ -26,7 +26,8 @@ values."
      ;; auto-completion
      ;; better-defaults
      emacs-lisp
-     ;; git
+     shell
+     git
      ;; markdown
      ;; org
      ;; (shell :variables
