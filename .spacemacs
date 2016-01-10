@@ -28,6 +28,7 @@ values."
      emacs-lisp
      shell
      git
+     clojure
      ;; markdown
      ;; org
      ;; (shell :variables
