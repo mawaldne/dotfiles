@@ -259,7 +259,14 @@ layers configuration. You are free to put any user code."
 
     (setq interprogram-cut-function 'mw/paste-to-osx)
     (setq interprogram-paste-function 'mw/copy-from-osx))
-  )
+
+  ;; This doesn't work yet. NEO tree is causing problems. Need to add
+  ;; Some kind of config to neotree..
+  (define-key evil-normal-state-map (kbd "C-h") 'evil-window-left)
+  (define-key evil-normal-state-map (kbd "C-j") 'evil-window-down)
+  (define-key evil-normal-state-map (kbd "C-k") 'evil-window-up)
+  (define-key evil-normal-state-map (kbd "C-l") 'evil-window-right)
+)
 
 ;; Do not write anything past this comment. This is where Emacs will
 ;; auto-generate custom variable definitions.
