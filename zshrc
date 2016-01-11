@@ -33,5 +33,4 @@ export LESS=-iXFR
 
 bindkey '^R' history-incremental-search-backward
 
-
 export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
