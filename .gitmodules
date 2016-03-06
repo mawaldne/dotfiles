@@ -34,3 +34,9 @@
 [submodule ".vim/bundle/vim-bundler"]
 	path = .vim/bundle/vim-bundler
 	url = https://github.com/tpope/vim-bundler
+[submodule ".vim/bundle/vim-commentary"]
+	path = .vim/bundle/vim-commentary
+	url = https://github.com/tpope/vim-commentary
+[submodule ".vim/bundle/vim-speeddating"]
+	path = .vim/bundle/vim-speeddating
+	url = git@github.com:tpope/vim-speeddating.git
