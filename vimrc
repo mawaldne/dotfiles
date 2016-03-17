@@ -13,6 +13,7 @@ autocmd!
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
+execute pathogen#helptags()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Color
@@ -135,6 +136,8 @@ endif
 
 " bind \ (backward slash) to grep shortcut
 command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
+
+nnoremap \ :Ag<SPACE>
 
 " Search open buffers for file
 nnoremap <c-u> :CtrlPBuffer<cr>

@@ -22,9 +22,6 @@
 [submodule ".vim/bundle/vim-ruby"]
 	path = .vim/bundle/vim-ruby
 	url = https://github.com/vim-ruby/vim-ruby
-[submodule ".vim/colors/molokai"]
-	path = .vim/colors/molokai
-	url = https://github.com/tomasr/molokai
 [submodule ".vim/bundle/ctrlp.vim"]
 	path = .vim/bundle/ctrlp.vim
 	url = https://github.com/kien/ctrlp.vim
@@ -43,3 +40,12 @@
 [submodule ".vim/bundle/vim-fugitive"]
 	path = .vim/bundle/vim-fugitive
 	url = git@github.com:tpope/vim-fugitive.git
+[submodule ".vim/bundle/vim-watchforchanges"]
+	path = .vim/bundle/vim-watchforchanges
+	url = git@github.com:mawaldne/vim-watchforchanges.git
+[submodule ".vim/bundle/molokai"]
+	path = .vim/bundle/molokai
+	url = https://github.com/tomasr/molokai
+[submodule ".vim/bundle/BufOnly.vim"]
+	path = .vim/bundle/BufOnly.vim
+	url = git@github.com:mawaldne/BufOnly.vim.git
