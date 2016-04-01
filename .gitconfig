@@ -17,7 +17,6 @@
     delete-merged = "!. ~/.githelpers && delete_merged_branches"
     rebase-branch = "!. ~/.githelpers && rebase_branch $1"
 [core]
-    excludesfile = /Users/mawaldne/.gitignore
     autocrlf = input
 [branch]
 	autosetuprebase = always
