@@ -1,5 +1,5 @@
-.vim/tmp/*.swp
-.vim/tmp/*.swo
+.vim/tmp
+.vim/tmp
 
 .emacs.d/backup/
 .emacs.d/backups/
