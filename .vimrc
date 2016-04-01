@@ -27,7 +27,8 @@ colorscheme molokai
 set number
 set nocompatible
 
-" allow unsaved background buffers and remember marks/undo for them
+" This allows buffers to be hidden if you've modified a buffer.
+" This is almost a must if you wish to use buffers in this way.
 set hidden
 
 " remember more commands and search history
@@ -120,53 +121,6 @@ set clipboard+=unnamed
 noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Reload files
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Save whenever switching windows or leaving vim. This is useful when running
-" the tests inside vim without having to save all files first.
-au FocusLost,WinLeave * :silent! wa
-
-" Trigger autoread when changing buffers or coming back to vim.
-au FocusGained,BufEnter * :silent! !
-
-" When switching panes in tmux, an escape sequence is printed. Redrawing gets
-" rid of it. See https://gist.github.com/mislav/5189704#comment-951447
-au FocusLost * :redraw!
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Ctrl P
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" The Silver Searcher
-if executable('ag')
-" Use ag over grep
-  set grepprg=ag\ --nogroup\ --nocolor
-
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
-
-  " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
-endif
-
-" bind \ (backward slash) to grep shortcut
-command! -nargs=+ -complete=file -bar Ag silent! grep! <args>|cwindow|redraw!
-
-nnoremap \ :Ag<SPACE>
-
-" Search open buffers for file
-nnoremap <c-u> :CtrlPBuffer<cr>
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" NerdTree
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:NERDTreeWinPos = "left"
-let g:NERDTreeWinSize = 40
-
-" Navigate to file in nerdtree
-map <leader>r :NERDTreeFind<cr>
-nmap <leader>ne :NERDTreeToggle<cr>
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " STATUS LINE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set statusline=[%02n]\ %f\ %(\[%M%R%H]%)%=\ %4l,%02c%2V\ %P%*
@@ -180,27 +134,14 @@ nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
 
-" Show invisible characters
-nmap <leader>i :set list!<CR>
-
 " Repeat last ex command using F2
 map <F2> @:
 
 " Repeat last macro using F3
 map <F3> @@
 
-" Clears on Save
-function! <SID>StripTrailingWhitespaces()
-    let l = line(".")
-    let c = col(".")
-    %s/\s\+$//e
-    call cursor(l, c)
-endfun
-
-" Clears trailing whitespace
-map <Leader><Space> :call <SID>StripTrailingWhitespaces()<CR>
-
-autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
+" Show invisible characters
+nmap <leader>i :set list!<CR>
 
 " Use the same symbols as TextMate for tabstops and EOLs
 if &encoding == 'utf-8'
@@ -217,10 +158,6 @@ map <leader>v :view %%
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Buffers
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" This allows buffers to be hidden if you've modified a buffer.
-" This is almost a must if you wish to use buffers in this way.
-set hidden
-
 " To open a new empty buffer
 " This replaces :tabnew which I used to bind to this mapping
 nmap <leader>T :enew<cr>
@@ -230,34 +167,8 @@ nmap <leader>T :enew<cr>
 nmap <leader>w :bp <BAR> bd #<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" RSpec.vim mappings
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
-
-let g:rspec_command = '!spring rspec {spec}'
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" RENAME CURRENT FILE
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-function! RenameFile()
-    let old_name = expand('%')
-    let new_name = input('New file name: ', expand('%'), 'file')
-    if new_name != '' && new_name != old_name
-        exec ':saveas ' . new_name
-        exec ':silent !rm ' . old_name
-        redraw!
-    endif
-endfunction
-map <leader>n :call RenameFile()<cr>
-
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Editing files
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
 " Opens an edit command with the path of the currently edited file filled in
 " Normal mode: <Leader>e
 map <Leader>e :e <C-R>=expand("%:p:h") . "/" <CR>
