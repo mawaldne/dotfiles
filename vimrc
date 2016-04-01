@@ -189,8 +189,18 @@ map <F2> @:
 " Repeat last macro using F3
 map <F3> @@
 
+" Clears on Save
+function! <SID>StripTrailingWhitespaces()
+    let l = line(".")
+    let c = col(".")
+    %s/\s\+$//e
+    call cursor(l, c)
+endfun
+
 " Clears trailing whitespace
-map <Leader><Space> :%s/\s\+$//<CR>:let @/=''<CR>
+map <Leader><Space> :call <SID>StripTrailingWhitespaces()<CR>
+
+autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
 
 " Use the same symbols as TextMate for tabstops and EOLs
 if &encoding == 'utf-8'
