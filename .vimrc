@@ -21,6 +21,9 @@ execute pathogen#helptags()
 let g:molokai_original = 1
 colorscheme molokai
 
+"set background=dark    " Setting dark mode
+"colorscheme gruvbox
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BASIC EDITING CONFIGURATION
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
