@@ -46,9 +46,9 @@
 [submodule ".vim/bundle/BufOnly.vim"]
 	path = .vim/bundle/BufOnly.vim
 	url = git@github.com:mawaldne/BufOnly.vim.git
-[submodule ".vim/bundle/gruvbox"]
-	path = .vim/bundle/gruvbox
-	url = git@github.com:morhetz/gruvbox.git
 [submodule ".vim/bundle/syntastic"]
 	path = .vim/bundle/syntastic
 	url = git@github.com:scrooloose/syntastic.git
+[submodule ".vim/bundle/dracula-theme"]
+	path = .vim/bundle/dracula-theme
+	url = https://github.com/mawaldne/dracula-theme
