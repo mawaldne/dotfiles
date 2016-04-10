@@ -18,11 +18,8 @@ execute pathogen#helptags()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Color
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"let g:molokai_original = 1
-"colorscheme molokai
-
-syntax on
-color dracula
+let g:molokai_original = 1
+colorscheme molokai
 
 " Set 256 colors
 set t_Co=256
