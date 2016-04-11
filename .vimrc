@@ -124,6 +124,12 @@ set clipboard+=unnamed
 noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Undo folder. undo changes after closing and opening files
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set undofile
+set undodir=~/.vim/undodir
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " STATUS LINE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set statusline=[%02n]\ %f\ %(\[%M%R%H]%)%=\ %4l,%02c%2V\ %P%*
