@@ -157,6 +157,9 @@ if &encoding == 'utf-8'
     set listchars=tab:▸\ ,eol:¬,trail:·
 endif
 
+" Pretty print a json file
+command! -nargs=0 Jqfile %!jq '.'
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " OPEN FILES IN DIRECTORY OF CURRENT FILE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

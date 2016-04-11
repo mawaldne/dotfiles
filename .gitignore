@@ -1,5 +1,6 @@
 .vim/tmp
 .vim/tmp
+.vim/undodir
 
 .emacs.d/backup/
 .emacs.d/backups/
