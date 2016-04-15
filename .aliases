@@ -43,5 +43,5 @@ alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/serv
 alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 
 alias rake_parallel='rake db:recreate && rake db:recreate RAILS_ENV=test && rake parallel:drop && rake parallel:create && rake parallel:migrate'
-
+alias db_recreate='rake db:recreate && rake db:recreate RAILS_ENV=test'
 
