@@ -13,7 +13,7 @@
     dc = diff --cached
     amend = commit --amend
 	stat = status -sb
-    pretty = "!. ~/.githelpers && pretty_git_log"
+    graph = "!. ~/.githelpers && pretty_git_log"
     delete-merged = "!. ~/.githelpers && delete_merged_branches"
     rebase-branch = "!. ~/.githelpers && rebase_branch $1"
 [core]
