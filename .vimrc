@@ -1,10 +1,7 @@
-" In the beginning, there was ed.
-" ed begat ex, and ex begat vi,
-" and vi begat vim.
-" - The Old Testament of Unix
-
 " This is Mike Waldner's .vimrc file
 " Use if you dare!
+
+" Additional configs and scripts are in .vim/plugins folder
 
 autocmd!
 
@@ -160,6 +157,9 @@ endif
 " Pretty print a json file
 command! -nargs=0 Jqfile %!jq '.'
 
+" Turn off highlighting
+nnoremap <leader>\ :noh<return> " Turn off highlighting
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " OPEN FILES IN DIRECTORY OF CURRENT FILE
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -200,3 +200,4 @@ autocmd FileType python set sw=4 sts=4 et
 
 " JSON highlighting
 autocmd BufNewFile,BufRead *.json,*.template set ft=javascript
+
