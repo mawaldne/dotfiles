@@ -55,3 +55,9 @@
 [submodule ".vim/bundle/nerdtree"]
 	path = .vim/bundle/nerdtree
 	url = https://github.com/scrooloose/nerdtree
+[submodule ".vim/bundle/rust.vim"]
+	path = .vim/bundle/rust.vim
+	url = https://github.com/rust-lang/rust.vim.git
+[submodule ".vim/bundle/vim-kalisi"]
+	path = .vim/bundle/vim-kalisi
+	url = git@github.com:freeo/vim-kalisi.git

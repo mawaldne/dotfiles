@@ -37,6 +37,7 @@ alias clear='echo "NO!"'
 alias git=hub
 
 alias e='emacs -nw'
+alias vim=nvim
 
 #Post gres
 alias pgstart='pg_ctl -D /usr/local/var/postgres9.5 -l /usr/local/var/postgres9.5/server.log start'
@@ -46,7 +47,7 @@ alias rake_parallel='rake db:recreate && rake db:recreate RAILS_ENV=test && rake
 
 alias db_recreate='rake db:recreate && rake db:recreate RAILS_ENV=test'
 
-alias tunnel_prod='ssh -L 5433:kycadmin.chcwltbeanhp.us-east-1.rds.amazonaws.com:5432 jumphost.vogogo.com'
+alias tunnel_prod='ssh -L 5433:kycadmin-95.chcwltbeanhp.us-east-1.rds.amazonaws.com:5432 jumphost.vogogo.com'
 alias tunnel_qa='ssh -L 5433:kycadmin.clmwqpoep4b9.us-west-2.rds.amazonaws.com:5432 qa-jumphost.vogogo.com'
 
 alias psql_kyc_tunnel='psql -Ureadonly -d kycprod -p 5433 -h 127.0.0.1'
