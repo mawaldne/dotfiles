@@ -43,13 +43,4 @@ alias vim=nvim
 alias pgstart='pg_ctl -D /usr/local/var/postgres9.5 -l /usr/local/var/postgres9.5/server.log start'
 alias pgstop='pg_ctl -D /usr/local/var/postgres9.5 stop -s -m fast'
 
-alias rake_parallel='rake db:recreate && rake db:recreate RAILS_ENV=test && rake parallel:drop && rake parallel:create && rake parallel:migrate'
-
-alias db_recreate='rake db:recreate && rake db:recreate RAILS_ENV=test'
-
-alias tunnel_prod='ssh -L 5433:kycadmin-95.chcwltbeanhp.us-east-1.rds.amazonaws.com:5432 jumphost.vogogo.com'
-alias tunnel_qa='ssh -L 5433:kycadmin.clmwqpoep4b9.us-west-2.rds.amazonaws.com:5432 qa-jumphost.vogogo.com'
-
-alias psql_kyc_tunnel='psql -Ureadonly -d kycprod -p 5433 -h 127.0.0.1'
-alias psql_vgg_tunnel='psql -Ureadonly -d vggprod -p 5433 -h 127.0.0.1'
 
