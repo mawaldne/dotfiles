@@ -8,9 +8,36 @@ autocmd!
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Pathogen
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-execute pathogen#infect()
-execute pathogen#helptags()
+"runtime bundle/vim-pathogen/autoload/pathogen.vim
+"execute pathogen#infect()
+"execute pathogen#helptags()
+"
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" vim-plug
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+call plug#begin('~/.vim/plugged')
+
+Plug 'https://github.com/mawaldne/BufOnly.vim'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
+Plug 'fatih/vim-go', { 'tag': '*' }
+Plug 'scrooloose/nerdtree'
+Plug 'scrooloose/syntastic'
+Plug 'tomasr/molokai'
+Plug 'vim-ruby/vim-ruby'
+Plug 'rust-lang/rust.vim'
+Plug 'Chiel92/vim-autoformat'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-commentary',        { 'on': '<Plug>Commentary' }
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rails',      { 'for': []      }
+Plug 'thoughtbot/vim-rspec'
+
+call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Color

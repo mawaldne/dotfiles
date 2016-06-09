@@ -34,6 +34,4 @@ export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 export GOPATH="$HOME/work"
 export PATH=$PATH:$GOPATH/bin
 
-eval $(docker-machine env)
-
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
