@@ -3,6 +3,7 @@
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:NERDTreeWinPos = "left"
 let g:NERDTreeWinSize = 40
+let g:NERDTreeShowHidden = 1
 
 " Navigate to file in nerdtree
 map <leader>r :NERDTreeFind<cr>
