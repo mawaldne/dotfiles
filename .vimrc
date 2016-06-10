@@ -6,14 +6,6 @@
 autocmd!
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Pathogen
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"runtime bundle/vim-pathogen/autoload/pathogen.vim
-"execute pathogen#infect()
-"execute pathogen#helptags()
-"
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-plug
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
@@ -77,9 +69,6 @@ set cmdheight=1
 set switchbuf=useopen
 set showtabline=1
 set winwidth=79
-
-" This makes RVM work inside Vim. I have no idea why.
-set shell=bash
 
 " Prevent Vim from clobbering the scrollback buffer. See
 " http://www.shallowsky.com/linux/noaltscreen.html
@@ -228,3 +217,15 @@ autocmd FileType python set sw=4 sts=4 et
 " JSON highlighting
 autocmd BufNewFile,BufRead *.json,*.template set ft=javascript
 
+" TODO move to plugins folder
+" ----------------------------------------------------------------------------
+" vim-commentary
+" ----------------------------------------------------------------------------
+map  gc  <Plug>Commentary
+nmap gcc <Plug>CommentaryLine
+
+" ----------------------------------------------------------------------------
+" vim-fugitive
+" ----------------------------------------------------------------------------
+nmap     <Leader>g :Gstatus<CR>gg<c-n>
+nnoremap <Leader>d :Gdiff<CR>
