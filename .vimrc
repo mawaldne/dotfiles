@@ -10,9 +10,8 @@ autocmd!
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 call plug#begin('~/.vim/plugged')
 
+Plug 'ctrlpvim/ctrlp.vim'
 Plug 'https://github.com/mawaldne/BufOnly.vim'
-Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-Plug 'junegunn/fzf.vim'
 Plug 'fatih/vim-go', { 'tag': '*' }
 Plug 'scrooloose/nerdtree'
 Plug 'scrooloose/syntastic'
@@ -28,6 +27,8 @@ Plug 'tpope/vim-commentary',        { 'on': '<Plug>Commentary' }
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rails',      { 'for': []      }
 Plug 'thoughtbot/vim-rspec'
+Plug 'elixir-lang/vim-elixir'
+Plug 'cakebaker/scss-syntax.vim'
 
 call plug#end()
 
@@ -209,7 +210,7 @@ map <Leader>v :vsplit <C-R>=expand("%:p:h") . "/" <CR>
 " CUSTOM AUTOCMDS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " for ruby, autoindent with two spaces, always expand tabs
-autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,cucumber set ai sw=2 sts=2 et
+autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,scss,cucumber set ai sw=2 sts=2 et
 
 " make python follow PEP8 ( http://www.python.org/dev/peps/pep-0008/ )
 autocmd FileType python set sw=4 sts=4 et

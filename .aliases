@@ -2,34 +2,22 @@ alias l='ls'
 alias ll='ls -lah'
 alias f="find . -name"
 alias rmorig="find . -regex '.*\.orig$' -exec rm -vf {} \;"
+alias rmdsstore="find . -regex '.*\.DS_Store$' -exec rm -vf {} \;"
 
 alias ctags="`brew --prefix`/bin/ctags"
 
 alias projects="cd ~/projects"
 alias dotfiles="cd ~/dotfiles"
 
-alias vtx="cd ~/projects/vtx"
-alias vogogo="cd ~/projects/vogogo"
-alias vogogo_scripts="cd ~/projects/scripts"
-alias kyc="cd ~/projects/kyc"
-alias kyc-admin="cd ~/projects/kyc-admin"
-alias infra="cd ~/projects/infrastructure"
-alias risque="cd ~/projects/risque"
 
-alias ga='git add'
-alias gpush='git push'
-alias gl='git log'
-alias gf='git fetch'
-alias gs='git status'
-alias gd='git diff'
-alias gm='git commit -m'
-alias gma='git commit -am'
-alias gb='git branch'
-alias gc='git checkout'
-alias gra='git remote add'
-alias grr='git remote rm'
-alias gpull='git pull'
-alias gcl='git clone'
+alias aliso="cd ~/projects/aliso"
+alias beacons="cd ~/projects/beacons"
+alias buccaneer="cd ~/projects/buccaneer"
+alias calafia="cd ~/projects/calafia"
+alias scheduler="cd ~/projects/scheduler"
+alias tabletop="cd ~/projects/tabletop"
+alias tabletop-rb="cd ~/projects/tabletop-rb"
+alias kbs_core_domain="cd ~/projects/kbs_core_domain"
 
 #USE CONTROL L
 alias clear='echo "NO!"'
@@ -43,4 +31,12 @@ alias vim=nvim
 alias pgstart='pg_ctl -D /usr/local/var/postgres9.5 -l /usr/local/var/postgres9.5/server.log start'
 alias pgstop='pg_ctl -D /usr/local/var/postgres9.5 stop -s -m fast'
 
+alias rake_parallel='rake db:recreate && rake db:recreate RAILS_ENV=test && rake parallel:drop && rake parallel:create && rake parallel:migrate'
 
+alias db_recreate='rake db:recreate && rake db:recreate RAILS_ENV=test'
+
+alias tunnel_prod='ssh -L 5433:kycadmin-95.chcwltbeanhp.us-east-1.rds.amazonaws.com:5432 mwaldner@jumphost.vogogo.com'
+alias tunnel_qa='ssh -L 5433:kycadmin.clmwqpoep4b9.us-west-2.rds.amazonaws.com:5432 mwaldner@qa-jumphost.vogogo.com'
+
+alias psql_kyc_tunnel='psql -Ureadonly -d kycprod -p 5433 -h 127.0.0.1'
+alias psql_vgg_tunnel='psql -Ureadonly -d vggprod -p 5433 -h 127.0.0.1'
