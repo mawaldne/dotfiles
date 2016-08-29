@@ -3,7 +3,7 @@ rm -f ~/.ctags && ln -s dotfiles/.ctags ~/.ctags
 rm -f ~/.gitconfig && ln -s dotfiles/.gitconfig ~/.gitconfig
 rm -f ~/.githelpers && ln -s dotfiles/.githelpers ~/.githelpers
 rm -f ~/.profile && ln -s dotfiles/.profile ~/.profile
-rm -f ~/.tmux.conf && ln -s dotfiles/tmux.conf ~/.tmux.conf
+rm -f ~/.tmux.conf && ln -s dotfiles/.tmux.conf ~/.tmux.conf
 rm -f ~/.vimrc && ln -s dotfiles/.vimrc ~/.vimrc
 rm -f ~/.zshrc && ln -s dotfiles/.zshrc ~/.zshrc
 rm -f ~/.vim && ln -s dotfiles/.vim ~/.vim

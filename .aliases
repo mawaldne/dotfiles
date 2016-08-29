@@ -40,3 +40,5 @@ alias tunnel_qa='ssh -L 5433:kycadmin.clmwqpoep4b9.us-west-2.rds.amazonaws.com:5
 
 alias psql_kyc_tunnel='psql -Ureadonly -d kycprod -p 5433 -h 127.0.0.1'
 alias psql_vgg_tunnel='psql -Ureadonly -d vggprod -p 5433 -h 127.0.0.1'
+
+alias tmux="TERM=screen-256color-bce tmux"
