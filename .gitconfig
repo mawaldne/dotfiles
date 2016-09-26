@@ -14,8 +14,8 @@
     amend = commit --amend
 	stat = status -sb
     graph = "!. ~/.githelpers && pretty_git_log"
-    delete-merged = "!. ~/.githelpers && delete_merged_branches"
-    rebase-branch = "!. ~/.githelpers && rebase_branch $1"
+    master = "!. ~/.githelpers && master"
+    clean-branches = "!. ~/.githelpers && clean_branches"
 [core]
     autocrlf = input
 [branch]
