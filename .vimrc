@@ -29,6 +29,7 @@ Plug 'tpope/vim-rails',      { 'for': []      }
 Plug 'thoughtbot/vim-rspec'
 Plug 'elixir-lang/vim-elixir'
 Plug 'cakebaker/scss-syntax.vim'
+Plug 'lambdatoast/elm.vim'
 
 call plug#end()
 
@@ -176,6 +177,10 @@ command! -nargs=0 Jqfile %!jq '.'
 
 " Turn off highlighting
 nnoremap <leader>\ :noh<return> " Turn off highlighting
+
+" Use ctrl s for saving, as I do it obsessively
+inoremap <c-s> <Esc>:w<CR>
+noremap <c-s> <Esc>:w<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " OPEN FILES IN DIRECTORY OF CURRENT FILE
