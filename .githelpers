@@ -53,6 +53,6 @@ master() {
 
 # Clean all branches except master and the current branch I'm on
 clean_branches() {
-    git branch | egrep -v "(master|\*)" | xargs git branch -D
+    git checkout master && git branch | egrep -v "(master|\*)" | xargs git branch -D
 }
 
