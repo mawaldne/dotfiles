@@ -18,6 +18,7 @@ alias scheduler="cd ~/projects/scheduler"
 alias tabletop="cd ~/projects/tabletop"
 alias tabletop-rb="cd ~/projects/tabletop-rb"
 alias kbs_core_domain="cd ~/projects/kbs_core_domain"
+alias formbuilder-rb="cd ~/projects/formbuilder-rb"
 
 #USE CONTROL L
 alias clear='echo "NO!"'

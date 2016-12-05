@@ -16,6 +16,7 @@
     graph = "!. ~/.githelpers && pretty_git_log"
     master = "!. ~/.githelpers && master"
     clean-branches = "!. ~/.githelpers && clean_branches"
+    master-clean = "!. ~/.githelpers && master && clean_branches"
 [core]
     autocrlf = input
 [branch]
