@@ -30,6 +30,7 @@ Plug 'thoughtbot/vim-rspec'
 Plug 'elixir-lang/vim-elixir'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'lambdatoast/elm.vim'
+Plug 'SirVer/ultisnips'
 
 call plug#end()
 
@@ -235,3 +236,13 @@ nmap gcc <Plug>CommentaryLine
 " ----------------------------------------------------------------------------
 nmap     <Leader>g :Gstatus<CR>gg<c-n>
 nnoremap <Leader>d :Gdiff<CR>
+
+let g:UltiSnipsExpandTrigger="<tab>"
+let g:UltiSnipsJumpForwardTrigger="<tab>"
+let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+let g:UltiSnipsSnippetDirectories=["custom-snippets"]
+let g:UltiSnipsSnippetsDir="~/.vim/custom-snippets"
+
+" If you want :UltiSnipsEdit to split your window.
+let g:UltiSnipsEditSplit="vertical"
+
