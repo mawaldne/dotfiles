@@ -29,8 +29,8 @@ alias e='emacs -nw'
 alias vim=nvim
 
 #Post gres
-alias pgstart='pg_ctl -D /usr/local/var/postgres9.5 -l /usr/local/var/postgres9.5/server.log start'
-alias pgstop='pg_ctl -D /usr/local/var/postgres9.5 stop -s -m fast'
+alias pgstart='pg_ctl -D /usr/local/var/postgres9.6 -l /usr/local/var/postgres9.6/server.log start'
+alias pgstop='pg_ctl -D /usr/local/var/postgres9.6 stop -s -m fast'
 
 alias rake_parallel='rake db:recreate && rake db:recreate RAILS_ENV=test && rake parallel:drop && rake parallel:create && rake parallel:migrate'
 
