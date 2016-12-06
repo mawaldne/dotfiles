@@ -1,6 +1,3 @@
-" This is Mike Waldner's .vimrc file
-" Use if you dare!
-
 " Additional configs and scripts are in .vim/plugins folder
 
 autocmd!
@@ -8,29 +5,47 @@ autocmd!
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-plug
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+if empty(glob('~/.config/nvim/autoload/plug.vim'))
+  silent !curl -fLo ~/.config/nvim/autoload/plug.vim --create-dirs
+        \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+  autocmd VimEnter * PlugInstall
+endif
 call plug#begin('~/.vim/plugged')
 
-Plug 'ctrlpvim/ctrlp.vim'
-Plug 'https://github.com/mawaldne/BufOnly.vim'
-Plug 'fatih/vim-go', { 'tag': '*' }
-Plug 'scrooloose/nerdtree'
-Plug 'scrooloose/syntastic'
 Plug 'tomasr/molokai'
-Plug 'vim-ruby/vim-ruby'
-Plug 'rust-lang/rust.vim'
-Plug 'Chiel92/vim-autoformat'
-Plug 'tpope/vim-bundler'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'SirVer/ultisnips'
+Plug 'https://github.com/mawaldne/BufOnly.vim'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-endwise'
-Plug 'tpope/vim-commentary',        { 'on': '<Plug>Commentary' }
+Plug 'tpope/vim-commentary', { 'on': '<Plug>Commentary' }
 Plug 'tpope/vim-fugitive'
+Plug 'justinmk/vim-dirvish'
+"Plug 'scrooloose/nerdtree'
+"Plug 'scrooloose/syntastic'
+
+" Ruby
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-rails',      { 'for': []      }
-Plug 'thoughtbot/vim-rspec'
-Plug 'elixir-lang/vim-elixir'
-Plug 'cakebaker/scss-syntax.vim'
+
+" Elm
 Plug 'lambdatoast/elm.vim'
-Plug 'SirVer/ultisnips'
+
+" Elixir
+Plug 'elixir-lang/vim-elixir'
+
+" JS
+Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
+Plug 'leafgarland/typescript-vim'
+Plug 'sheerun/vim-json'
+
+" HTML CSS
+Plug 'othree/html5.vim'
+Plug 'cakebaker/scss-syntax.vim'
+Plug 'lilydjwg/colorizer', { 'for': ['css', 'sass', 'scss', 'less', 'html', 'xdefaults', 'javascript', 'javascript.jsx'] }
 
 call plug#end()
 
@@ -64,6 +79,10 @@ set laststatus=2
 set showmatch
 set incsearch
 set hlsearch
+
+" Natural split changes
+set splitbelow                              " Splitting a window will put the new window below the current
+set splitright
 
 " make searches case-sensitive only if they contain upper-case characters
 set ignorecase smartcase
@@ -179,17 +198,6 @@ command! -nargs=0 Jqfile %!jq '.'
 " Turn off highlighting
 nnoremap <leader>\ :noh<return> " Turn off highlighting
 
-" Use ctrl s for saving, as I do it obsessively
-inoremap <c-s> <Esc>:w<CR>
-noremap <c-s> <Esc>:w<CR>
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" OPEN FILES IN DIRECTORY OF CURRENT FILE
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-cnoremap %% <C-R>=expand('%:h').'/'<cr>
-map <leader>e :edit %%
-map <leader>v :view %%
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Buffers
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -221,28 +229,7 @@ autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,scss,cucumber set ai 
 " make python follow PEP8 ( http://www.python.org/dev/peps/pep-0008/ )
 autocmd FileType python set sw=4 sts=4 et
 
-" JSON highlighting
-autocmd BufNewFile,BufRead *.json,*.template set ft=javascript
-
-" TODO move to plugins folder
-" ----------------------------------------------------------------------------
-" vim-commentary
-" ----------------------------------------------------------------------------
-map  gc  <Plug>Commentary
-nmap gcc <Plug>CommentaryLine
-
-" ----------------------------------------------------------------------------
-" vim-fugitive
-" ----------------------------------------------------------------------------
-nmap     <Leader>g :Gstatus<CR>gg<c-n>
-nnoremap <Leader>d :Gdiff<CR>
-
-let g:UltiSnipsExpandTrigger="<tab>"
-let g:UltiSnipsJumpForwardTrigger="<tab>"
-let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
-let g:UltiSnipsSnippetDirectories=["custom-snippets"]
-let g:UltiSnipsSnippetsDir="~/.vim/custom-snippets"
-
-" If you want :UltiSnipsEdit to split your window.
-let g:UltiSnipsEditSplit="vertical"
+" Dirvish
+let loaded_netrwPlugin = 1
+command! Explore :Dirvish %:p:h
 
