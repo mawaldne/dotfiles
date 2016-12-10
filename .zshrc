@@ -38,6 +38,8 @@ bindkey '^R' history-incremental-search-backward
 eval "$(rbenv init -)"
 
 # nvm
+# NVM is very slow to load and makes opening bash terminals painful.
+# Lazy load on the first run of node or npm
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh" --no-use # This loads nvm
 
