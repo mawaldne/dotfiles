@@ -14,13 +14,18 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'tomasr/molokai'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'SirVer/ultisnips'
+
+if has('nvim')
+    Plug 'SirVer/ultisnips'
+endif
+
 Plug 'https://github.com/mawaldne/BufOnly.vim'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-commentary', { 'on': '<Plug>Commentary' }
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-eunuch'
 Plug 'justinmk/vim-dirvish'
 "Plug 'scrooloose/nerdtree'
 "Plug 'scrooloose/syntastic'
@@ -154,6 +159,11 @@ let mapleader = "\<Space>"
 
 " Copy everything to the system clipboard
 set clipboard+=unnamed
+
+" NVIM Only feature - show a %s change as you write it in the file
+if has('nvim')"
+  set inccommand=split
+endif
 
 " Preserve indentation while pasting text from the OS X clipboard
 noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
