@@ -1,3 +1,4 @@
+echo 'dotfiles'
 rm -f ~/.aliases && ln -s dotfiles/.aliases ~/.aliases
 rm -f ~/.ctags && ln -s dotfiles/.ctags ~/.ctags
 rm -f ~/.gitconfig && ln -s dotfiles/.gitconfig ~/.gitconfig
