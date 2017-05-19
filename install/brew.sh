@@ -4,7 +4,7 @@ brew tap caskroom/cask
 brew tap caskroom/versions
 
 echo 'Installing necessary applications'
-brew install git rbenv fzf nvm bash-completion python3 boost tmux homebrew/completions/tmuxinator-completion ag hub
+brew install git rbenv fzf nvm bash-completion python3 boost tmux homebrew/completions/tmuxinator-completion ag hub ansible
 brew cask install docker slack iterm2 google-chrome dropbox
 
 echo 'Installing oh-my-zsh'

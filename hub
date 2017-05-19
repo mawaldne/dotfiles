@@ -1,0 +1,4 @@
+github.com:
+- user: mawaldne-surge
+  oauth_token: TOKEN
+  protocol: https
