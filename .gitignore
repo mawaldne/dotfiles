@@ -9,3 +9,5 @@
 .emacs.d/elpa/
 .emacs.d/places
 .emacs.d/eshell
+.emacs.d/auto-save-list/
+.emacs.d/recentf
