@@ -12,7 +12,8 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 call plug#begin('~/.vim/plugged')
 
-Plug 'tomasr/molokai'
+Plug 'dracula/vim'
+"Plug 'tomasr/molokai'
 Plug 'ctrlpvim/ctrlp.vim'
 
 if has('nvim')
@@ -35,6 +36,9 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-rails',      { 'for': []      }
 
+" Scala
+Plug 'https://github.com/derekwyatt/vim-scala'
+
 " Elm
 Plug 'lambdatoast/elm.vim'
 
@@ -52,16 +56,24 @@ Plug 'othree/html5.vim'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'lilydjwg/colorizer', { 'for': ['css', 'sass', 'scss', 'less', 'html', 'xdefaults', 'javascript', 'javascript.jsx'] }
 
+" Devops
+Plug 'https://github.com/hashivim/vim-terraform'
+
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Color
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:molokai_original = 1
-colorscheme molokai
+"let g:molokai_original = 1
+"colorscheme molokai
+
+color dracula
 
 " Set 256 colors
 set t_Co=256
+
+" In 10 years of using vim, a swap file has never saved me. They only annoyed me.
+set noswapfile
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BASIC EDITING CONFIGURATION
@@ -158,7 +170,7 @@ set directory=$HOME/.vim/tmp
 let mapleader = "\<Space>"
 
 " Copy everything to the system clipboard
-set clipboard+=unnamed
+set clipboard=unnamed
 
 " NVIM Only feature - show a %s change as you write it in the file
 if has('nvim')"
@@ -234,7 +246,7 @@ map <Leader>v :vsplit <C-R>=expand("%:p:h") . "/" <CR>
 " CUSTOM AUTOCMDS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " for ruby, autoindent with two spaces, always expand tabs
-autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,scss,cucumber set ai sw=2 sts=2 et
+autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,scss,cucumber,terraform set ai sw=2 sts=2 et
 
 " make python follow PEP8 ( http://www.python.org/dev/peps/pep-0008/ )
 autocmd FileType python set sw=4 sts=4 et

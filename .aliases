@@ -12,13 +12,12 @@ alias dotfiles="cd ~/dotfiles"
 
 alias aliso="cd ~/projects/aliso"
 alias beacons="cd ~/projects/beacons"
-alias buccaneer="cd ~/projects/buccaneer"
 alias calafia="cd ~/projects/calafia"
 alias scheduler="cd ~/projects/scheduler"
 alias tabletop="cd ~/projects/tabletop"
-alias tabletop-rb="cd ~/projects/tabletop-rb"
 alias kbs_core_domain="cd ~/projects/kbs_core_domain"
-alias formbuilder-rb="cd ~/projects/formbuilder-rb"
+alias vendor="cd ~/projects/vendor"
+alias kbs_ansible="cd ~/projects/ansible"
 
 #USE CONTROL L
 alias clear='echo "NO!"'
@@ -29,8 +28,8 @@ alias e='emacs -nw'
 alias vim=nvim
 
 #Post gres
-alias pgstart='pg_ctl -D /usr/local/var/postgres9.6 -l /usr/local/var/postgres9.6/server.log start'
-alias pgstop='pg_ctl -D /usr/local/var/postgres9.6 stop -s -m fast'
+alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
+alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 
 alias rake_parallel='rake db:recreate && rake db:recreate RAILS_ENV=test && rake parallel:drop && rake parallel:create && rake parallel:migrate'
 
