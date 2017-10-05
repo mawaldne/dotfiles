@@ -12,8 +12,9 @@ export JAVA_OPTS="-XX:MaxPermSize=256m -Xmx3g"
 
 export EDITOR=vim
 
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
-
 # GO
 export GOPATH="$HOME/work"
 export PATH=$PATH:$GOPATH/bin
+
+#Rust
+export PATH="$HOME/.cargo/bin:$PATH"

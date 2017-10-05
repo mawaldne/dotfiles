@@ -24,7 +24,7 @@ alias clear='echo "NO!"'
 
 alias git=hub
 
-alias e='emacs -nw'
+#alias e='emacs -nw'
 alias vim=nvim
 
 #Post gres
