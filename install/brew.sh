@@ -24,4 +24,7 @@ source $NVM_DIR/nvm.sh
 echo 'Installing rbenv'
 eval "$(rbenv init -)"
 
+echo 'Install emacs'
+brew install emacs
+
 open /Applications/Docker.app

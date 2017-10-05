@@ -1,0 +1,16 @@
+
+;; ----- smex-history -----
+(
+ zap-to-char
+ ag
+ cd
+ 5x5
+ arp
+ dbx
+ dig
+)
+
+;; ----- smex-data -----
+(
+ (zap-to-char . 1)
+)

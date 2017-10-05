@@ -36,6 +36,9 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-rails',      { 'for': []      }
 
+" Rust
+Plug 'rust-lang/rust.vim'
+
 " Scala
 Plug 'https://github.com/derekwyatt/vim-scala'
 
@@ -220,6 +223,10 @@ command! -nargs=0 Jqfile %!jq '.'
 " Turn off highlighting
 nnoremap <leader>\ :noh<return> " Turn off highlighting
 
+" Turn off ex mode.
+map q: <Nop>
+nnoremap Q <Nop>
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Buffers
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -255,3 +262,5 @@ autocmd FileType python set sw=4 sts=4 et
 let loaded_netrwPlugin = 1
 command! Explore :Dirvish %:p:h
 
+" Rustfmt on save
+let g:rustfmt_autosave = 1
