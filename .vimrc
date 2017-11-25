@@ -13,7 +13,6 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'dracula/vim'
-"Plug 'tomasr/molokai'
 Plug 'ctrlpvim/ctrlp.vim'
 
 if has('nvim')
@@ -28,8 +27,7 @@ Plug 'tpope/vim-commentary', { 'on': '<Plug>Commentary' }
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-eunuch'
 Plug 'justinmk/vim-dirvish'
-"Plug 'scrooloose/nerdtree'
-"Plug 'scrooloose/syntastic'
+Plug 'vim-syntastic/syntastic'
 
 " Ruby
 Plug 'vim-ruby/vim-ruby'
@@ -38,6 +36,7 @@ Plug 'tpope/vim-rails',      { 'for': []      }
 
 " Rust
 Plug 'rust-lang/rust.vim'
+Plug 'racer-rust/vim-racer'
 
 " Scala
 Plug 'https://github.com/derekwyatt/vim-scala'
@@ -264,3 +263,7 @@ command! Explore :Dirvish %:p:h
 
 " Rustfmt on save
 let g:rustfmt_autosave = 1
+let g:syntastic_rust_checkers = ['cargo']
+
+" Racer
+let g:racer_cmd = "~/.cargo/bin/racer"
