@@ -12,6 +12,8 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 call plug#begin('~/.vim/plugged')
 
+Plug 'vimwiki/vimwiki'
+
 Plug 'dracula/vim'
 Plug 'ctrlpvim/ctrlp.vim'
 
@@ -19,6 +21,7 @@ if has('nvim')
     Plug 'SirVer/ultisnips'
 endif
 
+Plug 'w0rp/ale'
 Plug 'https://github.com/mawaldne/BufOnly.vim'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
@@ -27,7 +30,9 @@ Plug 'tpope/vim-commentary', { 'on': '<Plug>Commentary' }
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-eunuch'
 Plug 'justinmk/vim-dirvish'
-Plug 'vim-syntastic/syntastic'
+Plug 'tpope/vim-markdown'
+Plug 'tpope/vim-git'
+Plug 'keith/tmux.vim'
 
 " Ruby
 Plug 'vim-ruby/vim-ruby'
@@ -60,6 +65,8 @@ Plug 'lilydjwg/colorizer', { 'for': ['css', 'sass', 'scss', 'less', 'html', 'xde
 
 " Devops
 Plug 'https://github.com/hashivim/vim-terraform'
+Plug 'honza/dockerfile.vim'
+
 
 call plug#end()
 
