@@ -16,6 +16,10 @@ export HISTSIZE=100000                   # big big history
 export HISTFILESIZE=100000               # big big history
 setopt HISTAPPEND HIST_IGNORE_SPACE HIST_REDUCE_BLANKS HIST_VERIFY HIST_IGNORE_ALL_DUPS HIST_IGNORE_DUPS SHARE_HISTORY INC_APPEND_HISTORY EXTENDED_HISTORY
 
+
+# 10ms for key sequences
+export KEYTIMEOUT=1
+
 # Add coloring to man pages
 # Source: https://wiki.archlinux.org/index.php/man_page#Colored_man_pages
 man() {
