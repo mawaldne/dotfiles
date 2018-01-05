@@ -17,10 +17,6 @@ Plug 'vimwiki/vimwiki'
 Plug 'dracula/vim'
 Plug 'ctrlpvim/ctrlp.vim'
 
-if has('nvim')
-    Plug 'SirVer/ultisnips'
-endif
-
 Plug 'w0rp/ale'
 Plug 'https://github.com/mawaldne/BufOnly.vim'
 Plug 'tpope/vim-repeat'
@@ -270,7 +266,14 @@ command! Explore :Dirvish %:p:h
 
 " Rustfmt on save
 let g:rustfmt_autosave = 1
-let g:syntastic_rust_checkers = ['cargo']
+
+" ALE RUST
+let g:ale_lint_on_save = 1
+let g:ale_lint_on_text_changed = 0
+let g:ale_enabled = 0
 
 " Racer
 let g:racer_cmd = "~/.cargo/bin/racer"
+
+au InsertEnter,InsertChange * silent redraw!
+au VimEnter,InsertLeave * silent redraw!
