@@ -36,9 +36,20 @@ alias rake_parallel='rake db:recreate && rake db:recreate RAILS_ENV=test && rake
 alias db_recreate='rake db:recreate && rake db:recreate RAILS_ENV=test'
 
 alias tunnel_prod='ssh -L 5433:kycadmin-95.chcwltbeanhp.us-east-1.rds.amazonaws.com:5432 mwaldner@jumphost.vogogo.com'
-alias tunnel_qa='ssh -L 5433:kycadmin.clmwqpoep4b9.us-west-2.rds.amazonaws.com:5432 mwaldner@qa-jumphost.vogogo.com'
+alias tunnel_stage='ssh -L 5433:kycadmin.clmwqpoep4b9.us-west-2.rds.amazonaws.com:5432 mwaldner@qa-jumphost.vogogo.com'
 
 alias psql_kyc_tunnel='psql -Ureadonly -d kycprod -p 5433 -h 127.0.0.1'
 alias psql_vgg_tunnel='psql -Ureadonly -d vggprod -p 5433 -h 127.0.0.1'
 
-alias tmux="TERM=screen-256color-bce tmux"
+#databases
+alias psql_tabletop_prod='psql -h tabletop-db.kbsforce.com -U tabletop_server_prod tabletop'
+alias psql_tabletop_beta='psql -h tabletop-db.beta.kbsforce.com -U tabletop_server tabletop'
+alias psql_tabletop_demo='psql -h tabletop-db.demo.kbsforce.com -U tabletop_server tabletop'
+alias psql_tabletop_stg='psql -h tabletop-db.stg.kbsforce.com -U tabletop_server tabletop'
+
+alias psql_scheduler_prod='psql -h scheduler-db.kbsforce.com -U kbsdbuser scheduler'
+alias psql_scheduler_beta='psql -h scheduler-db.beta.kbsforce.com -U kbsdbuser scheduler_beta2'
+alias psql_scheduler_demo='psql -h scheduler-db.demo.kbsforce.com -U kbsdbuser scheduler_demo2'
+alias psql_scheduler_stg='psql -h  scheduler-db.stg.kbsforce.com -U kbsdbuser scheduler_staging'
+
+#alias tmux="TERM=screen-256color-bce tmux"
