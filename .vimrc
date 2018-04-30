@@ -15,8 +15,12 @@ call plug#begin('~/.vim/plugged')
 Plug 'vimwiki/vimwiki'
 
 Plug 'dracula/vim'
-Plug 'ctrlpvim/ctrlp.vim'
+"Plug 'tyrannicaltoucan/vim-quantum'
 
+"Plug 'ctrlpvim/ctrlp.vim'
+
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
 Plug 'w0rp/ale'
 Plug 'https://github.com/mawaldne/BufOnly.vim'
 Plug 'tpope/vim-repeat'
@@ -34,6 +38,10 @@ Plug 'keith/tmux.vim'
 Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-rails',      { 'for': []      }
+
+" Go
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/symlink.sh' }
 
 " Rust
 Plug 'rust-lang/rust.vim'
@@ -59,9 +67,13 @@ Plug 'othree/html5.vim'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'lilydjwg/colorizer', { 'for': ['css', 'sass', 'scss', 'less', 'html', 'xdefaults', 'javascript', 'javascript.jsx'] }
 
+" Kotlin
+Plug 'udalov/kotlin-vim'
+
 " Devops
 Plug 'https://github.com/hashivim/vim-terraform'
 Plug 'honza/dockerfile.vim'
+Plug 'pearofducks/ansible-vim'
 
 
 call plug#end()
@@ -72,13 +84,13 @@ call plug#end()
 "let g:molokai_original = 1
 "colorscheme molokai
 
-color dracula
+let g:dracula_italic = 0
+let g:dracula_colorterm = 0
+colorscheme dracula
 
 " Set 256 colors
 set t_Co=256
 
-" In 10 years of using vim, a swap file has never saved me. They only annoyed me.
-set noswapfile
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BASIC EDITING CONFIGURATION
@@ -93,9 +105,9 @@ set hidden
 " remember more commands and search history
 set history=10000
 set expandtab
-set tabstop=4
+set tabstop=8
 set shiftwidth=4
-set softtabstop=4
+set softtabstop=0 noexpandtab
 set autoindent
 set laststatus=2
 set showmatch
@@ -129,9 +141,6 @@ set backspace=indent,eol,start
 
 " display incomplete commands
 set showcmd
-
-" Enable highlighting for syntax
-syntax on
 
 " Enable file type detection.
 " Use the default filetype settings, so that mail gets 'tw' set to 72,
@@ -167,6 +176,11 @@ set nojoinspaces
 
 " If a file is changed outside of vim, automatically reload it without asking
 set autoread
+
+" Enable highlighting for syntax
+syntax on
+
+set noswapfile
 
 set backupdir=$HOME/.vim/backup
 set directory=$HOME/.vim/tmp

@@ -50,3 +50,15 @@ export NVM_DIR="$HOME/.nvm"
 alias node='unalias node ; unalias npm ; nvm use default ; node $@'
 alias npm='unalias node ; unalias npm ; nvm use default ; npm $@'
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/mawaldne/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/mawaldne/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/mawaldne/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/mawaldne/google-cloud-sdk/completion.zsh.inc'; fi
+
+export PATH="~/.pyenv/bin:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
+
+export PATH=$(brew --prefix)/bin:$PATH

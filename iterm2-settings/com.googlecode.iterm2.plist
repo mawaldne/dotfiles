@@ -372,9 +372,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>269 126 606 469 0 0 2560 1417 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>749 849 796 473 0 0 2560 1417 </string>
+	<string>749 941 796 473 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>632 129 650 502 0 0 1440 877 </string>
+	<string>388 695 665 502 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>2715 633 665 502 2560 540 1440 877 </string>
 	<key>NeverWarnAboutShortLivedSessions_F2855B9C-C78A-4789-9AF8-BECF9D3FFB51</key>
@@ -1042,6 +1042,8 @@
 	<false/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
 	<real>533842890.58726197</real>
+	<key>PMPrintingExpandedStateForPrint2</key>
+	<false/>
 	<key>PointerActions</key>
 	<dict>
 		<key>Button,1,1,,</key>
@@ -1077,6 +1079,8 @@
 	</dict>
 	<key>PrefsCustomFolder</key>
 	<string>/Users/mawaldne/dotfiles/iterm2-settings</string>
+	<key>Print In Black And White</key>
+	<true/>
 	<key>SUEnableAutomaticChecks</key>
 	<true/>
 	<key>SUFeedAlternateAppNameKey</key>
@@ -1086,7 +1090,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-01-04T19:30:50Z</date>
+	<date>2018-01-17T15:41:55Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>TabStyle</key>

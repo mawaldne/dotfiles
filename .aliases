@@ -47,9 +47,11 @@ alias psql_tabletop_beta='psql -h tabletop-db.beta.kbsforce.com -U tabletop_serv
 alias psql_tabletop_demo='psql -h tabletop-db.demo.kbsforce.com -U tabletop_server tabletop'
 alias psql_tabletop_stg='psql -h tabletop-db.stg.kbsforce.com -U tabletop_server tabletop'
 
+
 alias psql_scheduler_prod='psql -h scheduler-db.kbsforce.com -U kbsdbuser scheduler'
 alias psql_scheduler_beta='psql -h scheduler-db.beta.kbsforce.com -U kbsdbuser scheduler_beta2'
 alias psql_scheduler_demo='psql -h scheduler-db.demo.kbsforce.com -U kbsdbuser scheduler_demo2'
 alias psql_scheduler_stg='psql -h  scheduler-db.stg.kbsforce.com -U kbsdbuser scheduler_staging'
+alias psql_clearwater_stg='psql -h scheduler-db.stg.kbsforce.com -U clearwater_app clearwater'
 
 #alias tmux="TERM=screen-256color-bce tmux"
