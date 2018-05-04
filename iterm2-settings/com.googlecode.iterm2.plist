@@ -369,14 +369,16 @@
 	<true/>
 	<key>NSWindow Frame NSFontPanel</key>
 	<string>878 273 823 479 0 0 2560 1417 </string>
+	<key>NSWindow Frame SUUpdateAlert</key>
+	<string>970 768 620 392 0 0 2560 1417 </string>
 	<key>NSWindow Frame SessionsPreferences</key>
-	<string>269 126 606 469 0 0 2560 1417 </string>
+	<string>840 273 606 469 0 0 2560 1417 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>749 941 796 473 0 0 2560 1417 </string>
+	<string>975 989 918 381 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>388 695 665 502 0 0 2560 1417 </string>
+	<string>388 241 1785 958 0 0 2560 1417 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
-	<string>2715 633 665 502 2560 540 1440 877 </string>
+	<string>379 227 665 502 0 0 2560 1417 </string>
 	<key>NeverWarnAboutShortLivedSessions_F2855B9C-C78A-4789-9AF8-BECF9D3FFB51</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_F2855B9C-C78A-4789-9AF8-BECF9D3FFB51_selection</key>
@@ -541,13 +543,13 @@
 				<key>Alpha Component</key>
 				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.1243896484375</real>
+				<real>0.04998779296875</real>
 				<key>Color Space</key>
 				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.10630192148608775</real>
+				<real>0.04998779296875</real>
 				<key>Red Component</key>
-				<real>0.10328729078173637</real>
+				<real>0.04998779296875</real>
 			</dict>
 			<key>Background Image Location</key>
 			<string></string>
@@ -632,12 +634,16 @@
 			<false/>
 			<key>Foreground Color</key>
 			<dict>
+				<key>Alpha Component</key>
+				<real>1</real>
 				<key>Blue Component</key>
-				<real>0.90032327175140381</real>
+				<real>0.94977099541574717</real>
+				<key>Color Space</key>
+				<string>sRGB</string>
 				<key>Green Component</key>
-				<real>0.90032327175140381</real>
+				<real>0.94977099541574717</real>
 				<key>Red Component</key>
-				<real>0.90032327175140381</real>
+				<real>0.95465087890625</real>
 			</dict>
 			<key>Guid</key>
 			<string>F2855B9C-C78A-4789-9AF8-BECF9D3FFB51</string>
@@ -1034,6 +1040,8 @@
 	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>E36F1E52-0390-4D0A-8E30-9A2C62A87FE6</string>
+	<key>NoSyncNeverAskAboutSettingAlternateMouseScroll</key>
+	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
 	<true/>
 	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
@@ -1090,7 +1098,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-01-17T15:41:55Z</date>
+	<date>2018-04-30T22:23:29Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>TabStyle</key>

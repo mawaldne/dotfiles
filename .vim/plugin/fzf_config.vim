@@ -1,5 +1,5 @@
-nmap <Leader>p :Buffers<CR>
-nmap <c-p> :Files<CR>
+nmap <c-u> :Buffers<CR>
+nmap <c-p> :GFiles<CR>
 
 function! s:ag_in(...)
   let dir = fnamemodify(expand('%'), ':p:h')
@@ -8,8 +8,8 @@ endfunction
 
 command! -nargs=+ -complete=dir AgLocal call s:ag_in(<f-args>)
 
-nnoremap \ :AgLocal<SPACE>
-nnoremap <leader>\ :Ag<SPACE>
+nnoremap \ :Ag<SPACE>
+nnoremap <leader>\ :AgLocal<SPACE>
 
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],
