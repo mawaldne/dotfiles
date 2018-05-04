@@ -39,6 +39,8 @@ bindkey '^R' history-incremental-search-backward
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+export PATH=$(brew --prefix)/bin:$PATH
+
 eval "$(rbenv init -)"
 
 # nvm
@@ -61,4 +63,3 @@ export PATH="~/.pyenv/bin:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
-export PATH=$(brew --prefix)/bin:$PATH
