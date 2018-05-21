@@ -39,10 +39,6 @@ bindkey '^R' history-incremental-search-backward
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export PATH=$(brew --prefix)/bin:$PATH
-
-eval "$(rbenv init -)"
-
 # nvm
 # NVM is very slow to load and makes opening bash terminals painful.
 # Lazy load on the first run of node or npm
@@ -59,7 +55,11 @@ if [ -f '/Users/mawaldne/google-cloud-sdk/path.zsh.inc' ]; then source '/Users/m
 # The next line enables shell command completion for gcloud.
 if [ -f '/Users/mawaldne/google-cloud-sdk/completion.zsh.inc' ]; then source '/Users/mawaldne/google-cloud-sdk/completion.zsh.inc'; fi
 
-export PATH="~/.pyenv/bin:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
+# export PATH="~/.pyenv/bin:$PATH"
+# eval "$(pyenv init -)"
+# eval "$(pyenv virtualenv-init -)"
+
+export PATH=$(brew --prefix)/bin:$PATH
+
+eval "$(rbenv init -)"
 
