@@ -1,15 +1,9 @@
 nmap <c-u> :Buffers<CR>
 nmap <c-p> :GFiles<CR>
 
-function! s:ag_in(...)
-  let dir = fnamemodify(expand('%'), ':p:h')
-  call fzf#vim#ag(join(a:000, ' '), {'dir': dir})
-endfunction
-
-command! -nargs=+ -complete=dir AgLocal call s:ag_in(<f-args>)
-
-nnoremap \ :Ag<SPACE>
-nnoremap <leader>\ :AgLocal<SPACE>
+" Pass arguments directly to Ag. See: https://github.com/junegunn/fzf.vim/issues/413
+command! -bang -nargs=+ -complete=dir Rag call fzf#vim#ag_raw(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
+nnoremap \ :Rag<SPACE>
 
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],
