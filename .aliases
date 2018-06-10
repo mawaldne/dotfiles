@@ -53,5 +53,6 @@ alias psql_scheduler_beta='psql -h scheduler-db.beta.kbsforce.com -U kbsdbuser s
 alias psql_scheduler_demo='psql -h scheduler-db.demo.kbsforce.com -U kbsdbuser scheduler_demo2'
 alias psql_scheduler_stg='psql -h  scheduler-db.stg.kbsforce.com -U kbsdbuser scheduler_staging'
 alias psql_clearwater_stg='psql -h scheduler-db.stg.kbsforce.com -U clearwater_app clearwater'
+alias psql_clearwater_prod='psql -h scheduler-db.kbsforce.com -U clearwater_app clearwater'
 
 #alias tmux="TERM=screen-256color-bce tmux"
