@@ -1,18 +1,18 @@
 [user]
-	name = Mike Waldner
+    name = Mike Waldner
     email = mwaldner@surgeforward.com
 [color]
-	branch = auto
-	diff = auto
-	interactive = auto
-	status = auto
+    branch = auto
+    diff = auto
+    interactive = auto
+    status = auto
 [alias]
-	stat = status -sb
+    stat = status -sb
     aa = add --all
     di = diff
     dc = diff --cached
     amend = commit --amend
-	stat = status -sb
+    stat = status -sb
     graph = "!. ~/.githelpers && pretty_git_log"
     master = "!. ~/.githelpers && master"
     clean-branches = "!. ~/.githelpers && clean_branches"
@@ -20,14 +20,16 @@
 [core]
     autocrlf = input
 [branch]
-	autosetuprebase = always
+    autosetuprebase = always
 [credential]
-	helper = osxkeychain
+    helper = osxkeychain
 [push]
-	default = simple
+    default = simple
 [filter "media"]
-	clean = git-media-clean %f
-	smudge = git-media-smudge %f
+    clean = git-media-clean %f
+    smudge = git-media-smudge %f
 
 [merge]
-	tool = opendiff
+    tool = opendiff
+[url "git@github.com:"]
+    insteadOf = https://github.com/
