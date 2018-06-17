@@ -4,7 +4,7 @@ brew tap caskroom/cask
 brew tap caskroom/versions
 
 echo 'Installing necessary applications'
-brew install git rbenv fzf nvm bash-completion python3 boost tmux homebrew/completions/tmuxinator-completion ag hub ansible
+brew install git fzf nvm bash-completion tmux homebrew/completions/tmuxinator-completion ag hub ansible
 brew cask install docker slack iterm2 google-chrome dropbox
 
 echo 'Installing oh-my-zsh'
@@ -20,11 +20,5 @@ mkdir -p ~/.nvm
 export NVM_DIR="$HOME/.nvm"
 ln -sf /usr/local/opt/nvm/nvm.sh $NVM_DIR/nvm.sh
 source $NVM_DIR/nvm.sh
-
-echo 'Installing rbenv'
-eval "$(rbenv init -)"
-
-echo 'Install emacs'
-brew install emacs
 
 open /Applications/Docker.app
