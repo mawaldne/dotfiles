@@ -12,12 +12,7 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 call plug#begin('~/.vim/plugged')
 
-Plug 'vimwiki/vimwiki'
-
 Plug 'dracula/vim'
-"Plug 'tyrannicaltoucan/vim-quantum'
-
-"Plug 'ctrlpvim/ctrlp.vim'
 
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
@@ -45,13 +40,6 @@ Plug 'nsf/gocode', { 'rtp': 'nvim', 'do': '~/.config/nvim/plugged/gocode/nvim/sy
 
 " Rust
 Plug 'rust-lang/rust.vim'
-Plug 'racer-rust/vim-racer'
-
-" Scala
-Plug 'https://github.com/derekwyatt/vim-scala'
-
-" Elm
-Plug 'lambdatoast/elm.vim'
 
 " Elixir
 Plug 'elixir-lang/vim-elixir'
@@ -67,16 +55,14 @@ Plug 'othree/html5.vim'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'lilydjwg/colorizer', { 'for': ['css', 'sass', 'scss', 'less', 'html', 'xdefaults', 'javascript', 'javascript.jsx'] }
 
-" Kotlin
-Plug 'udalov/kotlin-vim'
-
-" Devops
-Plug 'https://github.com/hashivim/vim-terraform'
-Plug 'honza/dockerfile.vim'
-Plug 'pearofducks/ansible-vim'
-
-
 call plug#end()
+
+source $HOME/.vim/conf.d/fzf_config.vim
+source $HOME/.vim/conf.d/ale.vim
+source $HOME/.vim/conf.d/commentary_config.vim
+source $HOME/.vim/conf.d/strip_whitespace.vim
+source $HOME/.vim/conf.d/reload_files.vim
+source $HOME/.vim/conf.d/vim-go.vim
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Color
@@ -277,17 +263,6 @@ autocmd FileType python set sw=4 sts=4 et
 " Dirvish
 let loaded_netrwPlugin = 1
 command! Explore :Dirvish %:p:h
-
-" Rustfmt on save
-let g:rustfmt_autosave = 1
-
-" ALE RUST
-let g:ale_lint_on_save = 1
-let g:ale_lint_on_text_changed = 0
-let g:ale_enabled = 0
-
-" Racer
-let g:racer_cmd = "~/.cargo/bin/racer"
 
 au InsertEnter,InsertChange * silent redraw!
 au VimEnter,InsertLeave * silent redraw!
