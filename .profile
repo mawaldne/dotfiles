@@ -14,9 +14,5 @@ export EDITOR=vim
 export GOPATH=$HOME/go
 export GOBIN=$HOME/go/bin
 export PATH=$PATH:$GOPATH/bin
-export PATH="/usr/local/opt/go@1.9/bin:$PATH"
 
-#Rust
 export PATH="$HOME/.cargo/bin:$PATH"
-export RUST_SRC_PATH="$(rustc --print sysroot)/lib/rustlib/src/rust/src"
-
