@@ -57,6 +57,7 @@ Plug 'lilydjwg/colorizer', { 'for': ['css', 'sass', 'scss', 'less', 'html', 'xde
 
 call plug#end()
 
+source $HOME/.vim/conf.d/dirvish.vim
 source $HOME/.vim/conf.d/fzf_config.vim
 source $HOME/.vim/conf.d/ale.vim
 source $HOME/.vim/conf.d/commentary_config.vim
@@ -259,10 +260,6 @@ autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,scss,cucumber,terrafo
 
 " make python follow PEP8 ( http://www.python.org/dev/peps/pep-0008/ )
 autocmd FileType python set sw=4 sts=4 et
-
-" Dirvish
-let loaded_netrwPlugin = 1
-command! Explore :Dirvish %:p:h
 
 au InsertEnter,InsertChange * silent redraw!
 au VimEnter,InsertLeave * silent redraw!
