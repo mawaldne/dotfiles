@@ -8,6 +8,3 @@ rm -f ~/.tmux.conf && ln -s dotfiles/.tmux.conf ~/.tmux.conf
 rm -f ~/.vimrc && ln -s dotfiles/.vimrc ~/.vimrc
 rm -f ~/.zshrc && ln -s dotfiles/.zshrc ~/.zshrc
 rm -f ~/.vim && ln -s dotfiles/.vim ~/.vim
-rm -f ~/.irbrc && ln -s dotfiles/.irbrc ~/.irbrc
-rm -f ~/.emacs.d && ln -s dotfiles/.emacs.d ~/.emacs.d
-ln -s dotfiles/.emacs.d/.emacs ~/.emacs
