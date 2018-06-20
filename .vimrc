@@ -57,14 +57,6 @@ Plug 'lilydjwg/colorizer', { 'for': ['css', 'sass', 'scss', 'less', 'html', 'xde
 
 call plug#end()
 
-source $HOME/.vim/conf.d/dirvish.vim
-source $HOME/.vim/conf.d/fzf_config.vim
-source $HOME/.vim/conf.d/ale.vim
-source $HOME/.vim/conf.d/commentary_config.vim
-source $HOME/.vim/conf.d/strip_whitespace.vim
-source $HOME/.vim/conf.d/reload_files.vim
-source $HOME/.vim/conf.d/vim-go.vim
-
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Color
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -263,3 +255,12 @@ autocmd FileType python set sw=4 sts=4 et
 
 au InsertEnter,InsertChange * silent redraw!
 au VimEnter,InsertLeave * silent redraw!
+
+source $HOME/.vim/conf.d/dirvish.vim
+source $HOME/.vim/conf.d/fzf_config.vim
+source $HOME/.vim/conf.d/ale.vim
+source $HOME/.vim/conf.d/commentary_config.vim
+source $HOME/.vim/conf.d/strip_whitespace.vim
+source $HOME/.vim/conf.d/reload_files.vim
+source $HOME/.vim/conf.d/vim-go.vim
+
