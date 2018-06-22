@@ -16,7 +16,7 @@ Plug 'dracula/vim'
 
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'w0rp/ale'
+"Plug 'w0rp/ale'
 Plug 'https://github.com/mawaldne/BufOnly.vim'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
@@ -164,6 +164,8 @@ set noswapfile
 set backupdir=$HOME/.vim/backup
 set directory=$HOME/.vim/tmp
 
+set nofixendofline
+
 " Space works better on my kenesis keyboard. Kenesis for life!
 let mapleader = "\<Space>"
 
@@ -256,9 +258,10 @@ autocmd FileType python set sw=4 sts=4 et
 au InsertEnter,InsertChange * silent redraw!
 au VimEnter,InsertLeave * silent redraw!
 
+
 source $HOME/.vim/conf.d/dirvish.vim
 source $HOME/.vim/conf.d/fzf_config.vim
-source $HOME/.vim/conf.d/ale.vim
+"source $HOME/.vim/conf.d/ale.vim
 source $HOME/.vim/conf.d/commentary_config.vim
 source $HOME/.vim/conf.d/strip_whitespace.vim
 source $HOME/.vim/conf.d/reload_files.vim
