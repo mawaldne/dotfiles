@@ -372,9 +372,9 @@
 	<key>NSWindow Frame SessionsPreferences</key>
 	<string>424 182 606 469 0 0 1920 1057 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>844 469 918 512 0 0 1920 1057 </string>
+	<string>844 441 796 486 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 555 665 502 0 0 1920 1057 </string>
+	<string>288 158 1344 740 0 0 1920 1057 </string>
 	<key>NeverWarnAboutShortLivedSessions_F2855B9C-C78A-4789-9AF8-BECF9D3FFB51</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_F2855B9C-C78A-4789-9AF8-BECF9D3FFB51_selection</key>
@@ -1034,6 +1034,8 @@
 			<string>/Users/mawaldne</string>
 		</dict>
 	</array>
+	<key>NoSyncHaveRequestedFullDiskAccess</key>
+	<true/>
 	<key>NoSyncHaveWarnedAboutPasteConfirmationChange</key>
 	<true/>
 	<key>NoSyncInstallationId</key>
@@ -1092,7 +1094,7 @@
 	<key>SUHasLaunchedBefore</key>
 	<true/>
 	<key>SULastCheckTime</key>
-	<date>2018-10-03T15:58:13Z</date>
+	<date>2019-05-10T19:30:44Z</date>
 	<key>SUSendProfileInfo</key>
 	<false/>
 	<key>SplitPaneDimmingAmount</key>
@@ -1104,7 +1106,7 @@
 	<key>findMode_iTerm</key>
 	<integer>0</integer>
 	<key>iTerm Version</key>
-	<string>3.2.1</string>
+	<string>3.2.9</string>
 	<key>kCPKSelectionViewPreferredModeKey</key>
 	<integer>0</integer>
 	<key>kCPKSelectionViewShowHSBTextFieldsKey</key>
