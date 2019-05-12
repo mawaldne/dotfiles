@@ -57,6 +57,9 @@ Plug 'othree/html5.vim'
 Plug 'cakebaker/scss-syntax.vim'
 Plug 'lilydjwg/colorizer', { 'for': ['css', 'sass', 'scss', 'less', 'html', 'xdefaults', 'javascript', 'javascript.jsx'] }
 
+"coc
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -253,6 +256,8 @@ map <Leader>v :vsplit <C-R>=expand("%:p:h") . "/" <CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " for ruby, autoindent with two spaces, always expand tabs
 autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,scss,cucumber,terraform set ai sw=2 sts=2 et
+
+autocmd BufNewFile,BufRead *.p8 set filetype=lua
 
 " make python follow PEP8 ( http://www.python.org/dev/peps/pep-0008/ )
 autocmd FileType python set sw=4 sts=4 et
