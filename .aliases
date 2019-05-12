@@ -9,16 +9,6 @@ alias ctags="`brew --prefix`/bin/ctags"
 alias projects="cd ~/projects"
 alias dotfiles="cd ~/dotfiles"
 
-
-alias aliso="cd ~/projects/aliso"
-alias beacons="cd ~/projects/beacons"
-alias calafia="cd ~/projects/calafia"
-alias scheduler="cd ~/projects/scheduler"
-alias tabletop="cd ~/projects/tabletop"
-alias kbs_core_domain="cd ~/projects/kbs_core_domain"
-alias vendor="cd ~/projects/vendor"
-alias kbs_ansible="cd ~/projects/ansible"
-
 #USE CONTROL L
 alias clear='echo "NO!"'
 
@@ -27,32 +17,8 @@ alias git=hub
 #alias e='emacs -nw'
 alias vim=nvim
 
-#Post gres
+#Postgres
 alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
 alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
-
-alias rake_parallel='rake db:recreate && rake db:recreate RAILS_ENV=test && rake parallel:drop && rake parallel:create && rake parallel:migrate'
-
-alias db_recreate='rake db:recreate && rake db:recreate RAILS_ENV=test'
-
-alias tunnel_prod='ssh -L 5433:kycadmin-95.chcwltbeanhp.us-east-1.rds.amazonaws.com:5432 mwaldner@jumphost.vogogo.com'
-alias tunnel_stage='ssh -L 5433:kycadmin.clmwqpoep4b9.us-west-2.rds.amazonaws.com:5432 mwaldner@qa-jumphost.vogogo.com'
-
-alias psql_kyc_tunnel='psql -Ureadonly -d kycprod -p 5433 -h 127.0.0.1'
-alias psql_vgg_tunnel='psql -Ureadonly -d vggprod -p 5433 -h 127.0.0.1'
-
-#databases
-alias psql_tabletop_prod='psql -h tabletop-db.kbsforce.com -U tabletop_server_prod tabletop'
-alias psql_tabletop_beta='psql -h tabletop-db.beta.kbsforce.com -U tabletop_server tabletop'
-alias psql_tabletop_demo='psql -h tabletop-db.demo.kbsforce.com -U tabletop_server tabletop'
-alias psql_tabletop_stg='psql -h tabletop-db.stg.kbsforce.com -U tabletop_server tabletop'
-
-
-alias psql_scheduler_prod='psql -h scheduler-db.kbsforce.com -U kbsdbuser scheduler'
-alias psql_scheduler_beta='psql -h scheduler-db.beta.kbsforce.com -U kbsdbuser scheduler_beta2'
-alias psql_scheduler_demo='psql -h scheduler-db.demo.kbsforce.com -U kbsdbuser scheduler_demo2'
-alias psql_scheduler_stg='psql -h  scheduler-db.stg.kbsforce.com -U kbsdbuser scheduler_staging'
-alias psql_clearwater_stg='psql -h scheduler-db.stg.kbsforce.com -U clearwater_app clearwater'
-alias psql_clearwater_prod='psql -h scheduler-db.kbsforce.com -U clearwater_app clearwater'
 
 #alias tmux="TERM=screen-256color-bce tmux"
