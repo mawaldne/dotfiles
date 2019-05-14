@@ -3,11 +3,3 @@
 .vim/undodir
 .vim/plugged
 .vim/autoload/plug.vim
-
-.emacs.d/backup/
-.emacs.d/backups/
-.emacs.d/elpa/
-.emacs.d/places
-.emacs.d/eshell
-.emacs.d/auto-save-list/
-.emacs.d/recentf
