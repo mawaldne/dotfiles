@@ -11,6 +11,9 @@ echo 'Installing Neovim'
 brew install neovim
 cd ~/.config && ln -s ~/.vim nvim
 
-echo 'Installing Plug'
+echo 'Installing Plug - Neovim and Vim'
 curl -fLo ~/.local/share/nvim/site/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
+
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
