@@ -5,7 +5,7 @@ echo 'Installing necessary applications'
 brew install git fzf bash-completion tmux ag ansible reattach-to-user-namespace
 
 echo 'Installing oh-my-zsh'
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh
 
 echo 'Installing Neovim'
 brew install neovim
