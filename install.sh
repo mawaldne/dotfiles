@@ -9,10 +9,11 @@
 # 4) Install Sizeup
 # 5) Install Chrome (todo: brew command)
 # 6) Install Slack (todo: brew command)
-# 7) Install MacVim (brew version doesn't install in applications :( )
-# 8) Install iterm2 and point to iterm2-settings folder (todo: brew command)
-# 9) Install ssh keys
-# 10) Clone dotfiles
+# 7) Install file hosting (todo: brew command)
+# 8) Install MacVim (brew version doesn't install in applications :( )
+# 9) Install iterm2 and point to iterm2-settings folder (todo: brew command)
+# 10) Install ssh keys
+# 11) Clone dotfiles
 
 source install/dotfiles.sh
 source install/brew.sh
