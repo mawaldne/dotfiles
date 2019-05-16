@@ -2,6 +2,8 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AllowClipboardAccess</key>
+	<true/>
 	<key>AppleAntiAliasingThreshold</key>
 	<integer>1</integer>
 	<key>AppleScrollAnimationEnabled</key>
@@ -370,9 +372,9 @@
 	<key>NSTableView Supports v2 KeyBingingTable</key>
 	<true/>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>467 350 796 486 0 0 1920 1057 </string>
+	<string>472 341 796 486 0 0 1920 1057 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>0 147 1337 730 0 0 1440 877 </string>
+	<string>356 420 665 502 0 0 1920 1057 </string>
 	<key>NeverWarnAboutShortLivedSessions_F2855B9C-C78A-4789-9AF8-BECF9D3FFB51</key>
 	<true/>
 	<key>NeverWarnAboutShortLivedSessions_F2855B9C-C78A-4789-9AF8-BECF9D3FFB51_selection</key>
@@ -1036,6 +1038,10 @@
 	<true/>
 	<key>NoSyncInstallationId</key>
 	<string>764226D3-074E-4B96-9FDE-B8B36D06420A</string>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile</key>
+	<true/>
+	<key>NoSyncNeverRemindPrefsChangesLostForFile_selection</key>
+	<integer>0</integer>
 	<key>NoSyncSuppressMissingProfileInArrangementWarning</key>
 	<true/>
 	<key>NoSyncTimeOfFirstLaunchOfVersionWithTip</key>
