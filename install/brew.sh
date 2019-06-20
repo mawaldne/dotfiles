@@ -2,7 +2,7 @@ echo 'Installing homebrew'
 /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 
 echo 'Installing necessary applications'
-brew install git fzf bash-completion tmux ag ansible reattach-to-user-namespace
+brew install git fzf bash-completion tmux tree ag jq ansible reattach-to-user-namespace
 
 echo 'Installing oh-my-zsh'
 curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh

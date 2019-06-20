@@ -29,8 +29,15 @@
 [filter "media"]
     clean = git-media-clean %f
     smudge = git-media-smudge %f
-
 [merge]
     tool = opendiff
 [url "git@github.com:"]
     insteadOf = https://github.com/
+[color "diff"]
+	whitespace = red reverse
+[color "log"]
+	whitespace = red reverse
+[diff]
+	wsErrorHighlight = all
+[log]
+	wsErrorHighlight = all
