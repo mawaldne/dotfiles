@@ -10,7 +10,5 @@ endfun
 
 " Clears trailing whitespace
 map <Leader><Space> :call <SID>StripTrailingWhitespaces()<CR>
-
 autocmd BufWritePre * :call <SID>StripTrailingWhitespaces()
-
 
