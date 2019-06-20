@@ -35,7 +35,7 @@ Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-rails',      { 'for': []      }
 
 " Go
-" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
 " Rust
 " Plug 'rust-lang/rust.vim'
@@ -44,21 +44,28 @@ Plug 'tpope/vim-rails',      { 'for': []      }
 " Plug 'elixir-lang/vim-elixir'
 
 " JS
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
-Plug 'leafgarland/typescript-vim'
+"Plug 'pangloss/vim-javascript'
+"Plug 'mxw/vim-jsx'
+"Plug 'leafgarland/typescript-vim'
 Plug 'sheerun/vim-json'
-Plug 'prettier/vim-prettier', {
-  \ 'do': 'yarn install',
-  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
+"Plug 'prettier/vim-prettier', {
+"  \ 'do': 'yarn install',
+"  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
 
 " HTML CSS
 Plug 'othree/html5.vim'
-Plug 'cakebaker/scss-syntax.vim'
-Plug 'lilydjwg/colorizer', { 'for': ['css', 'sass', 'scss', 'less', 'html', 'xdefaults', 'javascript', 'javascript.jsx'] }
+"Plug 'cakebaker/scss-syntax.vim'
+"Plug 'lilydjwg/colorizer', { 'for': ['css', 'sass', 'scss', 'less', 'html', 'xdefaults', 'javascript', 'javascript.jsx'] }
 
 "coc
 " Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+"
+
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+  Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
+  let g:deoplete#enable_at_startup = 1
+endif
 
 call plug#end()
 
@@ -271,6 +278,7 @@ au VimEnter,InsertLeave * silent redraw!
 source $HOME/.vim/conf.d/dirvish.vim
 source $HOME/.vim/conf.d/fzf_config.vim
 source $HOME/.vim/conf.d/ale.vim
+source $HOME/.vim/conf.d/deoplete.vim
 source $HOME/.vim/conf.d/commentary_config.vim
 source $HOME/.vim/conf.d/strip_whitespace.vim
 source $HOME/.vim/conf.d/reload_files.vim
