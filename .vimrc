@@ -37,6 +37,9 @@ Plug 'tpope/vim-rails',      { 'for': []      }
 " Go
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
+" kotlin
+Plug 'udalov/kotlin-vim'
+
 " Rust
 " Plug 'rust-lang/rust.vim'
 
@@ -65,6 +68,7 @@ if has('nvim')
   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
   Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
   let g:deoplete#enable_at_startup = 1
+  Plug 'zchee/deoplete-jedi'
 endif
 
 call plug#end()
@@ -262,7 +266,7 @@ map <Leader>v :vsplit <C-R>=expand("%:p:h") . "/" <CR>
 " CUSTOM AUTOCMDS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " for ruby, autoindent with two spaces, always expand tabs
-autocmd FileType ruby,haml,eruby,yaml,html,javascript,sass,scss,cucumber,terraform set ai sw=2 sts=2 et
+autocmd FileType text,ruby,haml,eruby,yaml,html,javascript,sass,scss,cucumber,terraform set ai sw=2 sts=2 et
 
 autocmd BufNewFile,BufRead *.p8 set filetype=lua
 

@@ -14,6 +14,7 @@
 # 9) Install iterm2 and point to iterm2-settings folder (todo: brew command)
 # 10) Install ssh keys
 # 11) Clone dotfiles
+# 12) Install dark mode slack - https://github.com/LanikSJ/slack-dark-mode
 
 source install/dotfiles.sh
 source install/brew.sh
