@@ -2,6 +2,9 @@
 
 autocmd!
 
+let g:python_host_prog = $HOME . "/.pyenv/versions/neovim2/bin/python"
+let g:python3_host_prog = $HOME . "/.pyenv/versions/neovim3/bin/python"
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-plug
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -12,11 +15,11 @@ if empty(glob('~/.config/nvim/autoload/plug.vim'))
 endif
 call plug#begin('~/.vim/plugged')
 
-Plug 'dracula/vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
+Plug 'dracula/vim'
 Plug '/usr/local/opt/fzf'
 Plug 'junegunn/fzf.vim'
-Plug 'w0rp/ale'
 Plug 'https://github.com/mawaldne/BufOnly.vim'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-surround'
@@ -37,39 +40,18 @@ Plug 'tpope/vim-rails',      { 'for': []      }
 " Go
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
-" kotlin
-Plug 'udalov/kotlin-vim'
-
-" Rust
-" Plug 'rust-lang/rust.vim'
-
-" Elixir
-" Plug 'elixir-lang/vim-elixir'
-
-" JS
-"Plug 'pangloss/vim-javascript'
-"Plug 'mxw/vim-jsx'
-"Plug 'leafgarland/typescript-vim'
+" JSON
 Plug 'sheerun/vim-json'
-"Plug 'prettier/vim-prettier', {
-"  \ 'do': 'yarn install',
-"  \ 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue'] }
 
 " HTML CSS
 Plug 'othree/html5.vim'
-"Plug 'cakebaker/scss-syntax.vim'
-"Plug 'lilydjwg/colorizer', { 'for': ['css', 'sass', 'scss', 'less', 'html', 'xdefaults', 'javascript', 'javascript.jsx'] }
 
-"coc
-" Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
-"
-
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-  Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
-  let g:deoplete#enable_at_startup = 1
-  Plug 'zchee/deoplete-jedi'
-endif
+" COC EXTENSIONS:
+Plug 'josa42/coc-go', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-highlight', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-prettier', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-pyls', {'do': 'yarn install --frozen-lockfile'}
+Plug 'neoclide/coc-solargraph', {'do': 'yarn install --frozen-lockfile'}
 
 call plug#end()
 
@@ -273,16 +255,14 @@ autocmd BufNewFile,BufRead *.p8 set filetype=lua
 " make python follow PEP8 ( http://www.python.org/dev/peps/pep-0008/ )
 autocmd FileType python set sw=4 sts=4 et
 
-" Make for fmt on save
-" autocmd BufWritePre *.go Fmt
+autocmd BufNewFile,BufRead *.j2 set filetype=python
 
 au InsertEnter,InsertChange * silent redraw!
 au VimEnter,InsertLeave * silent redraw!
 
+source $HOME/.vim/conf.d/coc.vim
 source $HOME/.vim/conf.d/dirvish.vim
 source $HOME/.vim/conf.d/fzf_config.vim
-source $HOME/.vim/conf.d/ale.vim
-source $HOME/.vim/conf.d/deoplete.vim
 source $HOME/.vim/conf.d/commentary_config.vim
 source $HOME/.vim/conf.d/strip_whitespace.vim
 source $HOME/.vim/conf.d/reload_files.vim
