@@ -1,5 +1,6 @@
 .vim/tmp
 .vim/tmp
 .vim/undodir
+.vim/undodir_old
 .vim/plugged
 .vim/autoload/plug.vim
