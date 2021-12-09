@@ -4,21 +4,16 @@ alias f="find . -name"
 alias rmorig="find . -regex '.*\.orig$' -exec rm -vf {} \;"
 alias rmdsstore="find . -regex '.*\.DS_Store$' -exec rm -vf {} \;"
 
-alias ctags="`brew --prefix`/bin/ctags"
-
 alias projects="cd ~/projects"
 alias dotfiles="cd ~/dotfiles"
 
 #USE CONTROL L
 alias clear='echo "NO!"'
 
-alias git=hub
-
-#alias e='emacs -nw'
 alias vim=nvim
 
-#Postgres
-alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
-alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
+# Postgres
+# alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
+# alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
 
 #alias tmux="TERM=screen-256color-bce tmux"
