@@ -174,9 +174,8 @@ if has('nvim')
     " New format in https://github.com/neovim/neovim/pull/13973 (f42e932,
     " 2021-04-13).
     set undodir=~/.vim/undodir
-  else
+else
     set undodir=~/.vim/undodir_old
-  endif
 endif
 
 
