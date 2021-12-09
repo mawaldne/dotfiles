@@ -170,7 +170,15 @@ noremap <leader>p :set paste<CR>:put  *<CR>:set nopaste<CR>
 " Undo folder. undo changes after closing and opening files
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set undofile
-set undodir=~/.vim/undodir
+if has('nvim')
+    " New format in https://github.com/neovim/neovim/pull/13973 (f42e932,
+    " 2021-04-13).
+    set undodir=~/.vim/undodir
+  else
+    set undodir=~/.vim/undodir_old
+  endif
+endif
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " STATUS LINE
