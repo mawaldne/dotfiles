@@ -15,9 +15,8 @@
     co = checkout
     amend = commit --amend
     graph = "!. ~/.githelpers && pretty_git_log"
-    master = "!. ~/.githelpers && master"
+    main = "!. ~/.githelpers && main"
     clean-branches = "!. ~/.githelpers && clean_branches"
-    master-clean = "!. ~/.githelpers && master && clean_branches"
 [core]
     autocrlf = input
 [branch]
@@ -41,3 +40,5 @@
 	wsErrorHighlight = all
 [log]
 	wsErrorHighlight = all
+[init]
+	defaultBranch = main
