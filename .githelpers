@@ -40,13 +40,13 @@ git_page_maybe() {
     fi
 }
 
-# Go to master, pull and fetch
-master() {
-    git checkout master && git pull && git fetch -p
+# Go to main, pull and fetch
+main() {
+    git checkout main && git pull && git fetch -p
 }
 
-# Clean all branches except master and the current branch I'm on
+# Clean all branches except main|master and the current branch I'm on
 clean_branches() {
-    git checkout master && git branch | egrep -v "(master|\*)" | xargs git branch -D
+    git checkout main && git branch | egrep -v "(main|master|\*)" | xargs git branch -D
 }
 
