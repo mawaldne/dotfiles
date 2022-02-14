@@ -32,6 +32,12 @@ Plug 'vim-ruby/vim-ruby'
 Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-rails',      { 'for': []      }
 
+" zig
+Plug 'ziglang/zig.vim'
+
+" Wiki
+" Plug 'vimwiki/vimwiki'
+
 " Go
 " Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 
@@ -226,7 +232,7 @@ nmap <leader>T :enew<cr>
 
 " Close the current buffer and move to the previous one
 " This replicates the idea of closing a tab
-nmap <leader>w :bp <BAR> bd #<CR>
+" nmap <leader>w :bp <BAR> bd #<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Editing files

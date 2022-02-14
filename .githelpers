@@ -21,6 +21,10 @@ pretty_git_log() {
     git log -n 5000 --graph --pretty="tformat:${LOG_FORMAT}" $* | pretty_git_format | git_page_maybe
 }
 
+pretty_git_log_me() {
+    git log -n 5000 --author=waldner --graph --pretty="tformat:${LOG_FORMAT}" $* | pretty_git_format | git_page_maybe
+}
+
 pretty_git_format() {
     # Replace (2 years ago) with (2 years)
     sed -Ee 's/(^[^<]*) ago\)/\1)/' |
@@ -44,6 +48,12 @@ git_page_maybe() {
 main() {
     git checkout main && git pull && git fetch -p
 }
+
+# Go to master, pull and fetch
+master() {
+    git checkout master && git pull && git fetch -p
+}
+
 
 # Clean all branches except main|master and the current branch I'm on
 clean_branches() {

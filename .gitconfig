@@ -15,6 +15,8 @@
     co = checkout
     amend = commit --amend
     graph = "!. ~/.githelpers && pretty_git_log"
+    graphme = "!. ~/.githelpers && pretty_git_log_me"
+    master = "!. ~/.githelpers && master"
     main = "!. ~/.githelpers && main"
     clean-branches = "!. ~/.githelpers && clean_branches"
 [core]
