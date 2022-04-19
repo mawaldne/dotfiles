@@ -28,18 +28,16 @@ Plug 'tpope/vim-git'
 Plug 'keith/tmux.vim'
 
 " Ruby
-Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-bundler'
-Plug 'tpope/vim-rails',      { 'for': []      }
+" Plug 'vim-ruby/vim-ruby'
+" Plug 'tpope/vim-bundler'
+" Plug 'tpope/vim-rails',      { 'for': []      }
 
 " zig
 Plug 'ziglang/zig.vim'
 
-" Wiki
-" Plug 'vimwiki/vimwiki'
-
 " Go
-" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+" Plug 'prabirshrestha/vim-lsp'
 
 " JSON
 " Plug 'sheerun/vim-json'
@@ -216,6 +214,10 @@ endif
 " Pretty print a json file
 command! -nargs=0 Jqfile %!jq '.'
 
+
+" Pretty print a sql file
+command! -nargs=0 Sqlfile %!pg_format '-'
+
 " Turn off highlighting
 nnoremap <leader>\ :noh<return> " Turn off highlighting
 
@@ -268,5 +270,6 @@ source $HOME/.vim/conf.d/fzf_config.vim
 source $HOME/.vim/conf.d/commentary_config.vim
 source $HOME/.vim/conf.d/strip_whitespace.vim
 source $HOME/.vim/conf.d/reload_files.vim
-" source $HOME/.vim/conf.d/vim-go.vim
+source $HOME/.vim/conf.d/vim-go.vim
+"source $HOME/.vim/conf.d/vim-lsp.vim
 

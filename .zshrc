@@ -41,6 +41,7 @@ export FZF_DEFAULT_OPTS='--bind ctrl-f:page-down,ctrl-b:page-up'
 
 # pyenv
 eval "$(pyenv init -)"
+eval "$(pyenv init --path)"
 eval "$(pyenv virtualenv-init -)"
 
 # rbenv
@@ -51,3 +52,8 @@ export PATH=$(brew --prefix)/bin:$(brew --prefix)/sbin:$PATH
 
 # vasm for 6502
 export PATH=$PATH:~/projects/6502eater/vasm
+
+# GO
+export GOPATH=$HOME/go
+export GOBIN=$HOME/go/bin
+export PATH=$PATH:$GOPATH/bin
