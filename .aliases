@@ -13,7 +13,11 @@ alias clear='echo "NO!"'
 alias vim=nvim
 
 # Postgres
-# alias pgstart='pg_ctl -D /usr/local/var/postgres -l /usr/local/var/postgres/server.log start'
-# alias pgstop='pg_ctl -D /usr/local/var/postgres stop -s -m fast'
+alias pgstart='brew services start postgres'
+alias pgstop='brew services stop postgres'
+
+# redis
+alias redis-start='brew services start redis'
+alias redis-stop='brew services stop redis'
 
 #alias tmux="TERM=screen-256color-bce tmux"

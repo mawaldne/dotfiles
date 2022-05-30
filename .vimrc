@@ -33,10 +33,10 @@ Plug 'keith/tmux.vim'
 " Plug 'tpope/vim-rails',      { 'for': []      }
 
 " zig
-Plug 'ziglang/zig.vim'
+" Plug 'ziglang/zig.vim'
 
 " Go
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " Plug 'prabirshrestha/vim-lsp'
 
 " JSON
@@ -53,9 +53,14 @@ call plug#end()
 "let g:molokai_original = 1
 "colorscheme molokai
 
-let g:dracula_italic = 0
-let g:dracula_colorterm = 0
-colorscheme dracula
+let macvim_skip_colorscheme=1
+if has('nvim')
+  let g:dracula_italic = 0
+  let g:dracula_colorterm = 0
+  colorscheme dracula
+else
+  set background=dark
+endif
 
 " Set 256 colors
 " set t_Co=256
@@ -270,6 +275,6 @@ source $HOME/.vim/conf.d/fzf_config.vim
 source $HOME/.vim/conf.d/commentary_config.vim
 source $HOME/.vim/conf.d/strip_whitespace.vim
 source $HOME/.vim/conf.d/reload_files.vim
-source $HOME/.vim/conf.d/vim-go.vim
+" source $HOME/.vim/conf.d/vim-go.vim
 "source $HOME/.vim/conf.d/vim-lsp.vim
 
