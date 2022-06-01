@@ -1,6 +1,6 @@
 [user]
-    name = Mike Waldner
-    email = mike.waldner@gmail.com
+    name = Michael Waldner
+    email = michael.waldner@shift.com
 [color]
     branch = auto
     diff = auto
@@ -21,6 +21,7 @@
     clean-branches = "!. ~/.githelpers && clean_branches"
 [core]
     autocrlf = input
+	editor = nvim
 [branch]
     autosetuprebase = always
 [credential]
