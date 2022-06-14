@@ -42,4 +42,13 @@ export FZF_DEFAULT_OPTS='--bind ctrl-f:page-down,ctrl-b:page-up'
 # Brew path
 export PATH=$(brew --prefix)/bin:$(brew --prefix)/sbin:$PATH
 
+# asdf
 . /usr/local/opt/asdf/libexec/asdf.sh
+
+# openjdk
+export PATH="/usr/local/opt/openjdk@8/bin:$PATH"
+
+# s0
+export SHIFT_POSTGRES_DOCKER_ENABLED=true
+export SHIFT_POSTGRES_DOCKER_PORT=5435
+export SHIFT_PYTHON3_ENABLED=true

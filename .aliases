@@ -13,8 +13,8 @@ alias clear='echo "NO!"'
 alias vim=nvim
 
 # Postgres
-alias pgstart='brew services start postgres'
-alias pgstop='brew services stop postgres'
+alias pgstart='brew services start postgresql@12'
+alias pgstop='brew services stop postgresql@12'
 
 # redis
 alias redis-start='brew services start redis'
