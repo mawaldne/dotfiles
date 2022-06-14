@@ -1,9 +1,7 @@
 nmap <c-u> :Buffers<CR>
 nmap <c-p> :GFiles<CR>
 
-" Pass arguments directly to Ag. See: https://github.com/junegunn/fzf.vim/issues/413
-command! -bang -nargs=+ -complete=dir Rag call fzf#vim#ag_raw(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
-nnoremap \ :Rag<SPACE>
+nnoremap \ :Rg<SPACE>
 
 let g:fzf_colors =
 \ { 'fg':      ['fg', 'Normal'],
