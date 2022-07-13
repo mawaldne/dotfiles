@@ -13,7 +13,7 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'dracula/vim'
-Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'https://github.com/mawaldne/BufOnly.vim'
 Plug 'tpope/vim-repeat'

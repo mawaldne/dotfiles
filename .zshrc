@@ -43,10 +43,10 @@ export FZF_DEFAULT_OPTS='--bind ctrl-f:page-down,ctrl-b:page-up'
 export PATH=$(brew --prefix)/bin:$(brew --prefix)/sbin:$PATH
 
 # asdf
-. /usr/local/opt/asdf/libexec/asdf.sh
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 # openjdk
-export PATH="/usr/local/opt/openjdk@8/bin:$PATH"
+export PATH="/opt/homebrew/opt/openjdk@8/bin:$PATH"
 
 # s0
 export SHIFT_POSTGRES_DOCKER_ENABLED=true
@@ -55,4 +55,4 @@ export SHIFT_PYTHON3_ENABLED=true
 
 # twilio autocomplete setup
 eval
-TWILIO_AC_ZSH_SETUP_PATH=/Users/michaelwaldner/.twilio-cli/autocomplete/zsh_setup && test -f $TWILIO_AC_ZSH_SETUP_PATH && source $TWILIO_AC_ZSH_SETUP_PATH;
+TWILIO_AC_ZSH_SETUP_PATH=/Users/mawaldne/.twilio-cli/autocomplete/zsh_setup && test -f $TWILIO_AC_ZSH_SETUP_PATH && source $TWILIO_AC_ZSH_SETUP_PATH;
