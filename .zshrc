@@ -52,3 +52,7 @@ export PATH="/usr/local/opt/openjdk@8/bin:$PATH"
 export SHIFT_POSTGRES_DOCKER_ENABLED=true
 export SHIFT_POSTGRES_DOCKER_PORT=5435
 export SHIFT_PYTHON3_ENABLED=true
+
+# twilio autocomplete setup
+eval
+TWILIO_AC_ZSH_SETUP_PATH=/Users/michaelwaldner/.twilio-cli/autocomplete/zsh_setup && test -f $TWILIO_AC_ZSH_SETUP_PATH && source $TWILIO_AC_ZSH_SETUP_PATH;

@@ -27,16 +27,20 @@ Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-git'
 Plug 'keith/tmux.vim'
 
+
+" JS
+Plug 'leafgarland/typescript-vim'
+
 " Ruby
-" Plug 'vim-ruby/vim-ruby'
-" Plug 'tpope/vim-bundler'
-" Plug 'tpope/vim-rails',      { 'for': []      }
+Plug 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-rails',      { 'for': []      }
 
 " zig
 " Plug 'ziglang/zig.vim'
 
 " Go
-" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " Plug 'prabirshrestha/vim-lsp'
 
 " JSON
