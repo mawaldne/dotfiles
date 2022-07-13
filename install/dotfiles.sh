@@ -8,4 +8,5 @@ rm -f ~/.tmux.conf && ln -s dotfiles/.tmux.conf ~/.tmux.conf
 rm -f ~/.vimrc && ln -s dotfiles/.vimrc ~/.vimrc
 rm -f ~/.zshrc && ln -s dotfiles/.zshrc ~/.zshrc
 rm -rf ~/.vim && ln -s dotfiles/.vim ~/.vim
+rm -rf ~/.tools-version && ln -s dotfiles/.tools-version ~/.tools-version
 rm -f ~/.config/nvim/init.vim && ln -s ~/dotfiles/.vimrc ~/.config/nvim/init.vim
