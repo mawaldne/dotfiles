@@ -46,7 +46,8 @@ export PATH=$(brew --prefix)/bin:$(brew --prefix)/sbin:$PATH
 . /opt/homebrew/opt/asdf/libexec/asdf.sh
 
 # openjdk
-export PATH="/opt/homebrew/opt/openjdk@8/bin:$PATH"
+#export PATH="/opt/homebrew/opt/openjdk@8/bin:$PATH"
+export PATH="/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/bin:$PATH"
 
 # s0
 export SHIFT_POSTGRES_DOCKER_ENABLED=true
