@@ -21,3 +21,5 @@ alias redis-start='brew services start redis'
 alias redis-stop='brew services stop redis'
 
 #alias tmux="TERM=screen-256color-bce tmux"
+
+alias k="kubectl"

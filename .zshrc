@@ -57,3 +57,12 @@ export SHIFT_PYTHON3_ENABLED=true
 # twilio autocomplete setup
 eval
 TWILIO_AC_ZSH_SETUP_PATH=/Users/mawaldne/.twilio-cli/autocomplete/zsh_setup && test -f $TWILIO_AC_ZSH_SETUP_PATH && source $TWILIO_AC_ZSH_SETUP_PATH;
+
+function kget() {
+    local account=$1
+    aws sso login --profile ${account}_sso
+    export AWS_PROFILE=${account}_sso
+    local cluster_name=${account}
+    aws eks update-kubeconfig --name ${cluster_name} --kubeconfig ~/shift/${cluster_name} --alias ${cluster_name}
+    export KUBECONFIG=~/shift/${cluster_name}
+}
