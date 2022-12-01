@@ -5,13 +5,23 @@ nmap <c-p> :GFiles<CR>
 "command! -bang -nargs=+ -complete=dir Rag call fzf#vim#ag_raw(<q-args>, {'options': '--delimiter : --nth 4..'}, <bang>0)
 "nnoremap \ :Rag<SPACE>
 
-command! -bang -nargs=* Rg
+command! -bang -nargs=* RgAll
   \ call fzf#vim#grep(
   \   'rg --no-ignore --hidden --column --line-number --no-heading --color=always '
   \  . (len(<q-args>) > 0 ? <q-args> : '""'), 1,
   \   <bang>0 ? fzf#vim#with_preview('up:60%')
   \           : fzf#vim#with_preview('right:50%:hidden', '?'),
   \   <bang>0)
+
+command! -bang -nargs=* Rg
+  \ call fzf#vim#grep(
+  \   'rg --column --line-number --no-heading --color=always '
+  \  . (len(<q-args>) > 0 ? <q-args> : '""'), 1,
+  \   <bang>0 ? fzf#vim#with_preview('up:60%')
+  \           : fzf#vim#with_preview('right:50%:hidden', '?'),
+  \   <bang>0)
+
+
 
 nnoremap \ :Rg<SPACE>
 

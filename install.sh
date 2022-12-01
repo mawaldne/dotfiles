@@ -20,4 +20,4 @@
 # 11) Clone dotfiles
 
 source install/dotfiles.sh
-source install/brew.sh
+#source install/brew.sh
