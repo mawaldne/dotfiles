@@ -6,6 +6,7 @@
     diff = auto
     interactive = auto
     status = auto
+	ui = true
 [alias]
     br = branch
     st = status -sb
@@ -14,7 +15,8 @@
     dc = diff --cached
     co = checkout
     amend = commit --amend
-    graph = "!. ~/.githelpers && pretty_git_log"
+    graph = "!. ~/.githelpers && pretty_git_log_ignores"
+    graphall = "!. ~/.githelpers && pretty_git_log_all"
     graphme = "!. ~/.githelpers && pretty_git_log_me"
     master = "!. ~/.githelpers && master"
     main = "!. ~/.githelpers && main"
@@ -22,6 +24,7 @@
 [core]
     autocrlf = input
 	editor = nvim
+	pager = diff-so-fancy | less --tabs=4 -RFX
 [branch]
     autosetuprebase = always
 [credential]
@@ -37,6 +40,12 @@
     insteadOf = https://github.com/
 [color "diff"]
 	whitespace = red reverse
+	meta = 11
+	frag = magenta bold
+	func = 146 bold
+	commit = yellow bold
+	old = red bold
+	new = green bold
 [color "log"]
 	whitespace = red reverse
 [diff]
@@ -50,3 +59,10 @@
 	smudge = git-lfs smudge -- %f
 	process = git-lfs filter-process
 	required = true
+[interactive]
+	diffFilter = diff-so-fancy --patch
+[color "diff-highlight"]
+	oldNormal = red bold
+	oldHighlight = red bold 52
+	newNormal = green bold
+	newHighlight = green bold 22
