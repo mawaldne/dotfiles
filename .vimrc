@@ -37,7 +37,7 @@ Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-rails',      { 'for': []      }
 
 " zig
-" Plug 'ziglang/zig.vim'
+Plug 'ziglang/zig.vim'
 
 " Go
 Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
@@ -225,7 +225,7 @@ command! -nargs=0 Jqfile %!jq '.'
 
 
 " Pretty print a sql file
-command! -nargs=0 Sqlfile %!pg_format '-'
+command! -nargs=0 Sqlfile %!pg_format -B '-'
 
 " Turn off highlighting
 nnoremap <leader>\ :noh<return> " Turn off highlighting

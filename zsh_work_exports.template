@@ -1,0 +1,1 @@
+export SOME_WORK_ENV=secret_dont_commit
