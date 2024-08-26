@@ -1,0 +1,16 @@
+set idea
+set commentary
+
+set clipboard+=unnamed
+
+Plug 'tpope/vim-surround'
+Plug 'preservim/nerdtree'
+
+# Navigate splits
+sethandler <c-j> a:vim
+sethandler <c-k> a:vim
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+
