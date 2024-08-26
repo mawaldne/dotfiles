@@ -8,7 +8,7 @@ alias projects="cd ~/projects"
 alias dotfiles="cd ~/dotfiles"
 
 # NO NO NO
-#USE CONTROL L
+# USE CONTROL L
 alias clear='echo "NO!"'
 
 alias vim=nvim
@@ -20,7 +20,5 @@ alias pgstop='brew services stop postgresql@12'
 # redis
 alias redis-start='brew services start redis'
 alias redis-stop='brew services stop redis'
-
-#alias tmux="TERM=screen-256color-bce tmux"
 
 alias k="kubectl"
