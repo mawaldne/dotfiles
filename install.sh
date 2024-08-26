@@ -19,6 +19,9 @@
 #
 # ) Clone dotfiles
 #
+# ) Install oh my zsh
+#   - you will need to make sure its setup as default
+#
 # ) Install brew
 #
 # ) Install wez term
