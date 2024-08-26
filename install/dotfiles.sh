@@ -8,4 +8,4 @@ rm -f ~/.vimrc && ln -s dotfiles/.vimrc ~/.vimrc
 rm -f ~/.zshrc && ln -s dotfiles/.zshrc ~/.zshrc
 rm -rf ~/.vim && ln -s dotfiles/.vim ~/.vim
 rm -f ~/.config/nvim/init.vim && ln -s ~/dotfiles/.vimrc ~/.config/nvim/init.vim
-rm -f ~/.config/wezterm && ln -s ../dotfiles/wezterm/.config/wezterm wezterm
+rm -f ~/.config/wezterm && ln -s ../dotfiles/wezterm/.config/wezterm ~/.config/wezterm
