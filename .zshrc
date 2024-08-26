@@ -60,7 +60,7 @@ export PATH="/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/bin:$PAT
 source ~/.zsh_work_exports
 
 # Terminal things for wezterm
-source ~/new_dotfiles/wezterm/.config/wezterm/wezterm.sh
+source ~/dotfiles/wezterm/.config/wezterm/wezterm.sh
 
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
