@@ -27,7 +27,6 @@ Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-git'
 Plug 'keith/tmux.vim'
 
-
 " JS
 Plug 'leafgarland/typescript-vim'
 
@@ -49,6 +48,12 @@ Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " HTML CSS
 " Plug 'othree/html5.vim'
 
+" Mermaid
+Plug 'mracos/mermaid.vim'
+
+" Odin
+Plug 'https://github.com/Tetralux/odin.vim'
+
 call plug#end()
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -69,6 +74,9 @@ endif
 " Set 256 colors
 " set t_Co=256
 
+if has("gui_macvim")
+  set guifont=Monaco:h16
+endif
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " BASIC EDITING CONFIGURATION
@@ -268,6 +276,8 @@ autocmd BufNewFile,BufRead *.s set filetype=nasm
 
 " make python follow PEP8 ( http://www.python.org/dev/peps/pep-0008/ )
 autocmd FileType python set sw=4 sts=4 et
+
+autocmd FileType odin set sw=4 sts=4 et
 
 autocmd BufNewFile,BufRead *.j2 set filetype=python
 

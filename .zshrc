@@ -56,27 +56,13 @@ eval "$(fnm env --use-on-cd --version-file-strategy=recursive)"
 #export PATH="/opt/homebrew/opt/openjdk@8/bin:$PATH"
 export PATH="/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/bin:$PATH"
 
-# s0
-# export SHIFT_POSTGRES_DOCKER_ENABLED=true
-# export SHIFT_POSTGRES_DOCKER_PORT=5435
-# export SHIFT_PYTHON3_ENABLED=true
-
-# twilio autocomplete setup
-#eval
-#TWILIO_AC_ZSH_SETUP_PATH=/Users/mawaldne/.twilio-cli/autocomplete/zsh_setup && test -f $TWILIO_AC_ZSH_SETUP_PATH && source $TWILIO_AC_ZSH_SETUP_PATH;
-
-# function kget() {
-#     local account=$1
-#     aws sso login --profile ${account}_sso
-#     export AWS_PROFILE=${account}_sso
-#     local cluster_name=${account}
-#     aws eks update-kubeconfig --name ${cluster_name} --kubeconfig ~/shift/${cluster_name} --alias ${cluster_name}
-#     export KUBECONFIG=~/shift/${cluster_name}
-# }
-
 # Exports required for work. Not checked into zsh
 source ~/.zsh_work_exports
 
 # Terminal things for wezterm
 source ~/new_dotfiles/wezterm/.config/wezterm/wezterm.sh
 
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"
+export PATH="/opt/homebrew/opt/llvm@14/bin:$PATH"

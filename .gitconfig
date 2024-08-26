@@ -7,7 +7,7 @@
     diff = auto
     interactive = auto
     status = auto
-	ui = true
+    ui = true
 [alias]
     br = branch
     st = status -sb
@@ -22,16 +22,17 @@
     master = "!. ~/.githelpers && master"
     main = "!. ~/.githelpers && main"
     clean-branches = "!. ~/.githelpers && clean_branches"
+    emptycommit = "!. ~/.githelpers && emptycommit"
 [core]
     autocrlf = input
-	editor = nvim
-	pager = diff-so-fancy | less --tabs=4 -RFX
+    editor = nvim
+    pager = diff-so-fancy | less --tabs=4 -RFX
 [branch]
     autosetuprebase = always
 [credential]
     helper = osxkeychain
 [push]
-    default = simple
+    default = current
 [filter "media"]
     clean = git-media-clean %f
     smudge = git-media-smudge %f
@@ -71,3 +72,5 @@
 	format = ssh
 [commit]
 	gpgsign = true
+[pull]
+	rebase = true

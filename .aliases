@@ -7,6 +7,7 @@ alias rmdsstore="find . -regex '.*\.DS_Store$' -exec rm -vf {} \;"
 alias projects="cd ~/projects"
 alias dotfiles="cd ~/dotfiles"
 
+# NO NO NO
 #USE CONTROL L
 alias clear='echo "NO!"'
 
