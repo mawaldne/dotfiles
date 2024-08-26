@@ -65,3 +65,7 @@ clean_branches() {
     git checkout main && git branch | egrep -v "(main|master|\*)" | xargs git branch -D
 }
 
+emptycommit() {
+    git commit --allow-empty-message -m ""
+}
+
