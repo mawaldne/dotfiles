@@ -37,11 +37,11 @@
 #   - brew install --cask sizeup
 #
 # ) Install MacVim
-#   - Install plug for .vim location - HOW?
+#   Instead from the dmg file downloaded from the site
+#   In theory should JUST work. But its always weird.
 #
 # ) Install Slack
 #   - brew install --cask slack
-#   - or just via web?
 #
 # # Files to save
 # zsh_history.

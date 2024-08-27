@@ -59,20 +59,9 @@ call plug#end()
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Color
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-"let g:molokai_original = 1
-"colorscheme molokai
-
-let macvim_skip_colorscheme=1
-if has('nvim')
-  let g:dracula_italic = 0
-  let g:dracula_colorterm = 0
-  colorscheme dracula
-else
-  set background=dark
-endif
-
-" Set 256 colors
-" set t_Co=256
+let g:dracula_italic = 0
+let g:dracula_colorterm = 0
+colorscheme dracula
 
 if has("gui_macvim")
   set guifont=Monaco:h16
