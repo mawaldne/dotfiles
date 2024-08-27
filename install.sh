@@ -39,12 +39,6 @@
 # ) Install MacVim
 #   - Install plug for .vim location - HOW?
 #
-# OLD. No longer needed will fix later
-# ) Install iterm2 and point to iterm2-settings folder (todo: brew command)
-#    a) Preferences - General -> Preferences - Load preferences from a custom folder
-#    b) additional setup for keyboard: https://coderwall.com/p/dapstw/keybindings-for-macosx-users-on-iterm2
-#    c) https://apple.stackexchange.com/questions/58769/my-keyboard-stopped-repeating-how-to-fix
-#
 # ) Install Slack
 #   - brew install --cask slack
 #   - or just via web?
