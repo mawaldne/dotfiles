@@ -1,7 +1,11 @@
 #! /bin/bash
 
 # Manual Installs first
-# ) Setup basic mac things (double click on right, hide menu bar)
+#
+# ) Setup basic mac things
+#   - Double click on right
+#   - Hide menu bar
+#   - Key repeat rate: https://apple.stackexchange.com/questions/46361/keyboard-no-longer-repeats-keys-when-held-down
 #
 # ) Install chrome
 #
@@ -44,14 +48,22 @@
 #   - brew install --cask slack
 #
 # # Files to save
-# zsh_history.
-# project files? Anything needed to backup?
+# zsh_history
+# project files
 #
-# WORK THINGS
-# AWS
-# 1password
-# slack
+# YARN - npm install -g yarn
+# 	.npmrc - add work related registies
 #
+# Install docker. Dark mode
+#
+# Install webstorm
+#   - install ideavim
+#   - font monaco 16
+#   - dracula theme
+#
+# Install datagrip
+# Import projects: https://blog.jetbrains.com/datagrip/2018/05/21/copy-and-share-data-sources-in-datagrip/
+
 
 source install/dotfiles.sh
 #source install/brew.sh

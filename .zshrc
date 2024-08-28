@@ -43,19 +43,9 @@ export FZF_DEFAULT_OPTS='--bind ctrl-f:page-down,ctrl-b:page-up'
 # Brew path
 export PATH=$(brew --prefix)/bin:$(brew --prefix)/sbin:$PATH
 
-# Go path
-export PATH=$PATH:$(go env GOPATH)/bin
-
-# asdf :( - Turned off
-# . /opt/homebrew/opt/asdf/libexec/asdf.sh
-
 # fnm - node management
 export PATH=/home/$USER/.fnm:$PATH
 eval "$(fnm env --use-on-cd --version-file-strategy=recursive)"
-
-# openjdk
-#export PATH="/opt/homebrew/opt/openjdk@8/bin:$PATH"
-export PATH="/Library/Java/JavaVirtualMachines/zulu-8.jdk/Contents/Home/bin:$PATH"
 
 # Exports required for work. Not checked into zsh
 source ~/.zsh_work_exports
@@ -66,4 +56,3 @@ source ~/dotfiles/wezterm/.config/wezterm/wezterm.sh
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
-export PATH="/opt/homebrew/opt/llvm@14/bin:$PATH"
