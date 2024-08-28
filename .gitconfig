@@ -1,7 +1,6 @@
 [user]
 	name = Michael Waldner
 	email = michael.waldner@allergan.com
-	signingkey = /Users/mawaldne/.ssh/github-personal-rsa.pub
 [color]
     branch = auto
     diff = auto
@@ -70,7 +69,5 @@
 	newHighlight = green bold 22
 [gpg]
 	format = ssh
-[commit]
-	gpgsign = true
 [pull]
 	rebase = true
