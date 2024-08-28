@@ -1,13 +1,10 @@
 alias l='ls'
 alias ll='ls -lah'
 alias f="find . -name"
-alias rmorig="find . -regex '.*\.orig$' -exec rm -vf {} \;"
-alias rmdsstore="find . -regex '.*\.DS_Store$' -exec rm -vf {} \;"
 
 alias projects="cd ~/projects"
 alias dotfiles="cd ~/dotfiles"
 
-# NO NO NO
 # USE CONTROL L
 alias clear='echo "NO!"'
 
