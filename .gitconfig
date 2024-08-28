@@ -1,6 +1,6 @@
 [user]
-	name = Michael Waldner
-	email = michael.waldner@allergan.com
+    name = Michael Waldner
+    email = michael.waldner@allergan.com
 [color]
     branch = auto
     diff = auto
@@ -40,34 +40,34 @@
 [url "git@github.com:"]
     insteadOf = https://github.com/
 [color "diff"]
-	whitespace = red reverse
-	meta = 11
-	frag = magenta bold
-	func = 146 bold
-	commit = yellow bold
-	old = red bold
-	new = green bold
+    whitespace = red reverse
+    meta = 11
+    frag = magenta bold
+    func = 146 bold
+    commit = yellow bold
+    old = red bold
+    new = green bold
 [color "log"]
-	whitespace = red reverse
+    whitespace = red reverse
 [diff]
-	wsErrorHighlight = all
+    wsErrorHighlight = all
 [log]
-	wsErrorHighlight = all
+    wsErrorHighlight = all
 [init]
-	defaultBranch = main
+    defaultBranch = main
 [filter "lfs"]
-	clean = git-lfs clean -- %f
-	smudge = git-lfs smudge -- %f
-	process = git-lfs filter-process
-	required = true
+    clean = git-lfs clean -- %f
+    smudge = git-lfs smudge -- %f
+    process = git-lfs filter-process
+    required = true
 [interactive]
-	diffFilter = diff-so-fancy --patch
+    diffFilter = diff-so-fancy --patch
 [color "diff-highlight"]
-	oldNormal = red bold
-	oldHighlight = red bold 52
-	newNormal = green bold
-	newHighlight = green bold 22
+    oldNormal = red bold
+    oldHighlight = red bold 52
+    newNormal = green bold
+    newHighlight = green bold 22
 [gpg]
-	format = ssh
+    format = ssh
 [pull]
-	rebase = true
+    rebase = true
