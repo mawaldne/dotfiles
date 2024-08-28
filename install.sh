@@ -46,10 +46,7 @@
 #
 # ) Install Slack
 #   - brew install --cask slack
-#
-# # Files to save
-# zsh_history
-# project files
+#   - setup push up to edit under accessibility
 #
 # YARN - npm install -g yarn
 # 	.npmrc - add work related registies
@@ -62,8 +59,20 @@
 #   - dracula theme
 #
 # Install datagrip
-# Import projects: https://blog.jetbrains.com/datagrip/2018/05/21/copy-and-share-data-sources-in-datagrip/
-
+#   - aws toolkit install
+#   - Import projects: https://blog.jetbrains.com/datagrip/2018/05/21/copy-and-share-data-sources-in-datagrip/
+#
+# AWS VPN
+#   - vpn files
+#   - install aws command line tools
+# 	- brew install awscli
+# 	- aws configure
+#   - get original .aws config tools
+#
+# Files to bring over?
+# zsh_history
+# project files
+#
 
 source install/dotfiles.sh
 #source install/brew.sh
