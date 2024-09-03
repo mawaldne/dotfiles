@@ -33,6 +33,7 @@
 #
 # ) Install LaunchBar (key in password manager)
 #    - brew install --cask launchbar
+#    - turn off shortcuts for clipboard (just keep command L)
 #
 # ) Install Alt tab
 #   - brew install --cask alt-tab
@@ -41,8 +42,8 @@
 #   - brew install --cask sizeup
 #
 # ) Install MacVim
-#   Instead from the dmg file downloaded from the site
-#   In theory should JUST work. But its always weird.
+#   Install from the dmg file downloaded from the site
+#   Setting should just work now
 #
 # ) Install Slack
 #   - brew install --cask slack
@@ -72,7 +73,9 @@
 # Files to bring over?
 # zsh_history
 # project files
+# todo.txt
+# Desktop files not in icloud?
 #
 
 source install/dotfiles.sh
-#source install/brew.sh
+source install/brew.sh
