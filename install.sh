@@ -20,6 +20,10 @@
 # 	- xcode-select --install MIGHT work
 #
 # ) Install ssh keys
+# 	- mkdir -p ~/.ssh
+#       - chmod 700 ~/.ssh
+#       - copy files
+#       - chmod 600 id_rsa
 #
 # ) Clone dotfiles
 #
