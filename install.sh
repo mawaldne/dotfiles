@@ -62,11 +62,17 @@
 #   - install ideavim
 #   - font monaco 16
 #   - dracula theme
+#   - setup .ideavim
 #
 # Install datagrip
 #   - aws toolkit install
 #   - Import projects: https://blog.jetbrains.com/datagrip/2018/05/21/copy-and-share-data-sources-in-datagrip/
+#   - Copy exported project into DataGripProjects/NAME/...., and just open in the new datagrip
 #
+# Install RapidAPI
+#   - Get old files
+#
+# Setup aws-cli
 # AWS VPN
 #   - vpn files
 #   - install aws command line tools
