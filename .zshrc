@@ -47,6 +47,9 @@ export PATH=$(brew --prefix)/bin:$(brew --prefix)/sbin:$PATH
 export PATH=/home/$USER/.fnm:$PATH
 eval "$(fnm env --use-on-cd --version-file-strategy=recursive)"
 
+# Go path
+export PATH=~/go/bin:$PATH
+
 # Exports required for work. Not checked into zsh
 source ~/.zsh_work_exports
 
@@ -56,3 +59,7 @@ source ~/dotfiles/wezterm/.config/wezterm/wezterm.sh
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
+
+# Butler
+export PATH=~/Library/Application\ Support/itch/apps/butler:$PATH
+
