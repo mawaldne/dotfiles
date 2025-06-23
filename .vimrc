@@ -31,15 +31,15 @@ Plug 'keith/tmux.vim'
 Plug 'leafgarland/typescript-vim'
 
 " Ruby
-Plug 'vim-ruby/vim-ruby'
-Plug 'tpope/vim-bundler'
-Plug 'tpope/vim-rails',      { 'for': []      }
+" Plug 'vim-ruby/vim-ruby'
+" Plug 'tpope/vim-bundler'
+" Plug 'tpope/vim-rails',      { 'for': []      }
 
 " zig
-Plug 'ziglang/zig.vim'
+" Plug 'ziglang/zig.vim'
 
 " Go
-Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
+" Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries' }
 " Plug 'prabirshrestha/vim-lsp'
 
 " JSON
@@ -94,7 +94,7 @@ set splitbelow                              " Splitting a window will put the ne
 set splitright
 
 " make searches case-sensitive only if they contain upper-case characters
-set ignorecase smartcase
+" set ignorecase smartcase
 
 set cmdheight=1
 set switchbuf=useopen
@@ -256,8 +256,8 @@ map <Leader>v :vsplit <C-R>=expand("%:p:h") . "/" <CR>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CUSTOM AUTOCMDS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" for ruby, autoindent with two spaces, always expand tabs
-autocmd FileType text,ruby,haml,eruby,yaml,html,javascript,sass,scss,cucumber,terraform,nasm set ai sw=2 sts=2 et
+" autoindent with two spaces, always expand tabs
+autocmd FileType text,ruby,haml,eruby,yaml,html,javascript,sass,scss,cucumber,terraform,nasm,odin set ai sw=2 sts=2 et
 
 autocmd BufNewFile,BufRead *.p8 set filetype=lua
 
@@ -266,7 +266,7 @@ autocmd BufNewFile,BufRead *.s set filetype=nasm
 " make python follow PEP8 ( http://www.python.org/dev/peps/pep-0008/ )
 autocmd FileType python set sw=4 sts=4 et
 
-autocmd FileType odin set sw=4 sts=4 et
+" autocmd FileType odin set sw=2 sts=2 et
 
 autocmd BufNewFile,BufRead *.j2 set filetype=python
 

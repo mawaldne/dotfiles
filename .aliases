@@ -19,3 +19,4 @@ alias redis-start='brew services start redis'
 alias redis-stop='brew services stop redis'
 
 alias k="kubectl"
+alias gpoh="git push origin HEAD"
