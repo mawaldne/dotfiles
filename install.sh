@@ -49,6 +49,8 @@
 #   Install from the dmg file downloaded from the site
 #   Setting should just work now
 #
+# ) Neovim: Neovim is a bit weird with autoload. You might have to manually put plug in .config/nvim/autoload
+#
 # ) Install Slack
 #   - brew install --cask slack
 #   - setup push up to edit under accessibility

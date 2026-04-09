@@ -5,3 +5,5 @@ fi
 ulimit -n 1024
 
 export EDITOR=vim
+
+. "$HOME/.local/bin/env"
