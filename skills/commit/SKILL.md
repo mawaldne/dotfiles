@@ -44,6 +44,13 @@ Creates well-formatted commits with conventional commit messages and emoji.
 
 `<type>: <description> <jira-reference>`
 
+**Body (required for non-trivial changes):**
+
+Include a commit body when the diff touches 3+ files, involves deletions/migrations, or the "why" isn't obvious from the title. Use bullet points to summarize:
+- What changed and why
+- Any notable deletions, migrations, or dependency changes
+- Breaking changes (if any)
+
 **Types:**
 
 - `feat`: New feature
@@ -67,6 +74,7 @@ DP-292
 - First line <72 chars
 - Atomic commits (single purpose)
 - Split unrelated changes
+- Include a body for commits touching 3+ files or involving deletions/migrations
 
 ## Split Criteria
 
