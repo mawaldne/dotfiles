@@ -8,7 +8,7 @@ allowed-tools:
     "Bash(git commit:*)",
     "Bash(git diff:*)",
     "Bash(git log:*)",
-    "AskUserQuestion'
+    "AskUserQuestion"
   ]
 ---
 
