@@ -8,6 +8,7 @@ allowed-tools:
     "Bash(git commit:*)",
     "Bash(git diff:*)",
     "Bash(git log:*)",
+    "AskUserQuestion'
   ]
 ---
 
@@ -34,12 +35,14 @@ Creates well-formatted commits with conventional commit messages and emoji.
 1. Check staged files, commit only staged files if any exist
 2. Analyze diff for multiple logical changes
 3. Suggest splitting if needed
-4. Create commit with emoji conventional format
-5. Husky handles pre-commit hooks automatically
+4. If the user has not provided a jira reference, you can use AskUserQuestion to get it.
+5. Append the jira reference to the title of the git commit.
+6. Create commit with emoji conventional format
+7. Husky handles pre-commit hooks automatically
 
 ## Commit Format
 
-`<type>: <description>`
+`<type>: <description> <jira-reference>`
 
 **Types:**
 
@@ -51,6 +54,12 @@ Creates well-formatted commits with conventional commit messages and emoji.
 - `perf`: Performance
 - `test`: Tests
 - `chore`: Build/tools
+
+**jira reference examples***
+
+PAY-0000
+DL-1234
+DP-292
 
 **Rules:**
 
