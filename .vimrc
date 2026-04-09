@@ -25,7 +25,7 @@ Plug 'tpope/vim-eunuch'
 Plug 'justinmk/vim-dirvish'
 Plug 'tpope/vim-markdown'
 Plug 'tpope/vim-git'
-Plug 'keith/tmux.vim'
+" Plug 'keith/tmux.vim'
 
 " JS
 Plug 'leafgarland/typescript-vim'
@@ -49,10 +49,10 @@ Plug 'leafgarland/typescript-vim'
 " Plug 'othree/html5.vim'
 
 " Mermaid
-Plug 'mracos/mermaid.vim'
+" Plug 'mracos/mermaid.vim'
 
 " Odin
-Plug 'https://github.com/Tetralux/odin.vim'
+" Plug 'https://github.com/Tetralux/odin.vim'
 
 call plug#end()
 

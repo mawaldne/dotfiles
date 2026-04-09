@@ -44,11 +44,14 @@ export FZF_DEFAULT_OPTS='--bind ctrl-f:page-down,ctrl-b:page-up'
 export PATH=$(brew --prefix)/bin:$(brew --prefix)/sbin:$PATH
 
 # fnm - node management
-export PATH=/home/$USER/.fnm:$PATH
+#export PATH=/home/$USER/.fnm:$PATH - % this doesn't exist...
 eval "$(fnm env --use-on-cd --version-file-strategy=recursive)"
 
 # Go path
 export PATH=~/go/bin:$PATH
+
+# local bin for aider/etc
+export PATH=~/.local/bin:$PATH
 
 # Exports required for work. Not checked into zsh
 source ~/.zsh_work_exports
@@ -60,6 +63,4 @@ export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init -)"
 
-# Butler
-export PATH=~/Library/Application\ Support/itch/apps/butler:$PATH
-
+. "$HOME/.local/bin/env"

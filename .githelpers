@@ -61,7 +61,7 @@ master() {
 
 # Clean all branches except main|master and the current branch I'm on
 clean_branches() {
-    git checkout main && git branch | egrep -v "(main|master|\*)" | xargs git branch -D
+    git checkout main && git branch | egrep -v "^\s*\*?\s*(main|master)$" | xargs git branch -D
 }
 
 emptycommit() {
