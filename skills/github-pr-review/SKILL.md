@@ -1,7 +1,13 @@
 ---
 name: github-pr-review
 description: Use when reviewing GitHub pull requests with gh CLI - creates pending reviews with code suggestions, batches comments, and chooses appropriate event types (COMMENT/APPROVE/REQUEST_CHANGES)
-allowed-tools: AskUserQuestion
+allowed-tools:
+  - AskUserQuestion
+  - Bash(gh --version)
+  - Bash(gh pr view *)
+  - Bash(gh pr diff *)
+  - Bash(gh repo view *)
+  - Bash(gh api *)
 ---
 
 # GitHub PR Review
