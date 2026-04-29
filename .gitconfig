@@ -38,8 +38,6 @@
     smudge = git-media-smudge %f
 [merge]
     tool = opendiff
-[url "git@github.com:"]
-    insteadOf = https://github.com/
 [color "diff"]
     whitespace = red reverse
     meta = 11

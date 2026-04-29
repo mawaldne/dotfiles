@@ -21,7 +21,7 @@ allowed-tools:
 
 # Claude Command: Commit
 
-Creates well-formatted commits with conventional commit messages and emoji.
+Creates well-formatted commits with conventional commit messages.
 
 ## Usage
 
@@ -35,23 +35,54 @@ Creates well-formatted commits with conventional commit messages and emoji.
 1. Check staged files, commit only staged files if any exist
 2. Analyze diff for multiple logical changes
 3. Suggest splitting if needed
-4. If the user has not provided a jira reference, you can use AskUserQuestion to get it.
-5. Append the jira reference to the title of the git commit.
-6. Create commit with emoji conventional format
+4. Determine the **scope** from the diff (service, package, or repo component). If not obvious, use AskUserQuestion to ask the user.
+5. If the user has not provided a jira reference, use AskUserQuestion to get it.
+6. Create commit with the structured format (title + body)
 7. Husky handles pre-commit hooks automatically
 
 ## Commit Format
 
-`<type>: <description> <jira-reference>`
+**Title:**
 
-**Body (required for non-trivial changes):**
+`type(scope): description. JIRA-NNN`
 
-Include a commit body when the diff touches 3+ files, involves deletions/migrations, or the "why" isn't obvious from the title. Use bullet points to summarize:
-- What changed and why
-- Any notable deletions, migrations, or dependency changes
-- Breaking changes (if any)
+**Body (always included):**
 
-**Types:**
+```
+## Description
+
+A few sentences describing overall goals of the commit's changes.
+
+JIRA ticket:
+https://adl-technology.atlassian.net/browse/JIRA-NNN
+
+## Test plans
+
+1. Step-by-step plan to test the changes
+2. ...
+```
+
+**Example commit message:**
+
+```
+feat(database): add unique constraint on consumer_id + preference_id. DL-1476
+
+## Description
+
+Prevent duplicate choice rows by adding a unique constraint and updating
+the upsert conflict key. Includes a data migration to clean up existing
+duplicates.
+
+JIRA ticket:
+https://adl-technology.atlassian.net/browse/DL-1476
+
+## Test plans
+
+1. Run integration tests for consumer-preference-choice repository
+2. Verify no duplicate rows exist after migration
+```
+
+## Types
 
 - `feat`: New feature
 - `fix`: Bug fix
@@ -62,19 +93,29 @@ Include a commit body when the diff touches 3+ files, involves deletions/migrati
 - `test`: Tests
 - `chore`: Build/tools
 
-**jira reference examples***
+## Scope
 
-PAY-0000
-DL-1234
-DP-292
+Scope is **always required** in the title. It is the name of a service, package, or repo component.
 
-**Rules:**
+Examples: `database`, `rest`, `consumer-preferences`, `terms-conditions`
 
+Derive from the diff when possible (e.g., if all changes are in `packages/database/`, scope is `database`). If changes span multiple packages, use the primary one or a higher-level name.
+
+## JIRA Reference
+
+Examples: `DL-1234`, `PAY-0000`, `DP-292`
+
+Always appended after a period at the end of the title line.
+
+## Rules
+
+- Title format: `type(scope): description. JIRA-NNN`
+- Scope is always required
+- Body always includes `## Description`, `JIRA ticket:` link, and `## Test plans`
 - Imperative mood ("add" not "added")
 - First line <72 chars
 - Atomic commits (single purpose)
 - Split unrelated changes
-- Include a body for commits touching 3+ files or involving deletions/migrations
 
 ## Split Criteria
 
