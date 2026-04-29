@@ -4,3 +4,6 @@
 .vim/undodir_old
 .vim/plugged
 .vim/autoload/plug.vim
+
+skills/devex-net/
+skills/snowflake-cli/
