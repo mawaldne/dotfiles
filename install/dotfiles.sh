@@ -12,3 +12,4 @@ rm -rf ~/.vim && ln -s dotfiles/.vim ~/.vim
 rm -f ~/.config/nvim/init.vim && ln -s ~/dotfiles/.vimrc ~/.config/nvim/init.vim
 rm -f ~/.config/wezterm && ln -s ../dotfiles/wezterm/.config/wezterm ~/.config/wezterm
 rm -f ~/.claude/skills && ln -s ../dotfiles/skills ~/.claude/skills
+mkdir -p ~/.pi/agent && rm -f ~/.pi/agent/AGENTS.md && ln -s ~/dotfiles/skills/AGENTS.md ~/.pi/agent/AGENTS.md

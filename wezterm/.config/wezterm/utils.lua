@@ -4,7 +4,7 @@ local os = require 'os';
 
 return {
   workspace_projects = {
-      'alle-backend-payments',
+      'my-project',
   },
 
   dot = function (color)

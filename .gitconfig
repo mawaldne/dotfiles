@@ -1,7 +1,7 @@
 [user]
     name = Michael Waldner
     email = 40419+mawaldne@users.noreply.github.com
-    signingkey = /Users/waldnmx/.ssh/github-personal-rsa.pub
+    signingkey = ~/.ssh/github-personal-rsa.pub
 [color]
     branch = auto
     diff = auto
@@ -76,3 +76,7 @@
 	stripLeadingSymbols = false
 [url "https://github.com/"]
 	insteadOf = git@github.com:
+# Work identity is intentionally kept OUT of this public repo.
+# Repos under ~/projects/ pick up the work email from ~/.gitconfig-work (untracked, local only).
+[includeIf "gitdir:~/projects/"]
+	path = ~/.gitconfig-work
