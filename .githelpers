@@ -26,7 +26,7 @@ pretty_git_log_all() {
 }
 
 pretty_git_log_me() {
-    git log -n 5000 --author=waldner --graph --pretty="tformat:${LOG_FORMAT}" $* | pretty_git_format | git_page_maybe
+    git log -n 5000 --author=Waldner --graph --pretty="tformat:${LOG_FORMAT}" $* | pretty_git_format | git_page_maybe
 }
 
 pretty_git_format() {
